@@ -9,13 +9,34 @@
     <meta name="description" content="Professional Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/app.min.js" as="script">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
+
+    <!-- Inline critical CSS -->
+    <style>
+        /* Add critical styles here */
+    </style>
+
+    <!-- Defer non-critical JavaScript -->
+    <script defer src="vendor/jquery/jquery.min.js"></script>
+    <script defer src="vendor/bootstrap/popper.min.js"></script>
+    <script defer src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script defer src="vendor/select2/select2.min.js"></script>
+    <script defer src="vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script defer src="vendor/stellar/jquery.stellar.js"></script>
+    <script defer src="vendor/isotope/isotope.min.js"></script>
+    <script defer src="vendor/lightcase/lightcase.js"></script>
+    <script defer src="vendor/waypoints/waypoint.min.js"></script>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="js/app.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
@@ -129,7 +150,7 @@
     <div class="container">
         <div class="section-content">
             <!-- Section Title -->
-            <div class="title-wrap mb-5" data-aos="fade-up">
+            <div class="title-wrap mb-5"">
                 <h2 class="section-title">
                     Get Your Website Made <a href="contact.html">In a Day</a>
                 </h2>
@@ -142,14 +163,14 @@
                     <div class="row">
                         <!-- Features Item -->
                         <div class="col-md-4 col-sm-12 text-center mt-4">
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-cog fs-40"></i>
                                 </div>
                                 <h4>Flexible Design</h4>
                                 <p>Customizable designs to meet your unique needs.</p>
                             </div>
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-frame-contract fs-40"></i>
                                 </div>
@@ -160,14 +181,14 @@
                         <!-- End of Feature Item -->
                         <!-- Features Item -->
                         <div class="col-md-4 col-sm-12 text-center">
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-bubble fs-40"></i>
                                 </div>
                                 <h4>Full Support</h4>
                                 <p>Dedicated support to ensure your website runs smoothly.</p>
                             </div>
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-magic-wand fs-40"></i>
                                 </div>
@@ -178,14 +199,14 @@
                         <!-- End of Feature Item -->
                         <!-- Features Item -->
                         <div class="col-md-4 col-sm-12 text-center mt-4">
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-clock fs-40"></i>
                                 </div>
                                 <h4>Ontime Project</h4>
                                 <p>Efficient project management to meet your deadlines.</p>
                             </div>
-                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                            <div class="shadow rounded feature-item p-4 mb-4">
                                 <div class="my-4">
                                     <i class="lnr lnr-thumbs-up fs-40"></i>
                                 </div>
@@ -209,7 +230,7 @@
                 <div class="col-md-12">
                     <div class="row align-items-center text-white">
 
-                        <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
+                        <div class="col-md-4 offset-md-2 col-sm-6" >
                             <h4 class="mb-4">Build a Professional Website for Your Business or Startup</h4>
                             <p>Make a great first impression with a website that reflects the professionalism of your business or startup. Our expert team will work with you to create a customized website that meets your unique needs and goals.</p>
                             <button type="button" class="btn btn-outline-primary"> PROJECTS</button>
@@ -239,7 +260,7 @@
                             <img class="my-5" src="img/SEO.png" alt="">
                         </div><!--/ .col-md-4.col-md-offset-right-2.col-sm-6 -->
 
-                        <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="fade-left">
+                        <div class="col-md-4 offset-md-right-2 col-sm-6" >
                             <h4 class="mb-4">Optimized for Search Engines: HTML/CSS Web Design</h4>
                             <p>We believe that a great website is not only visually stunning, but also optimized for search engines. That's why we use the latest HTML/CSS web design techniques to ensure your website is fully optimized and runs smoothly. With our expertise, your website will not only look great, but also rank high on search engine results pages, helping you reach more customers and grow your business.</p>
                             <div class="progress mb-3">
@@ -261,7 +282,7 @@
 </section>	<!-- Testimonial Section-->
 <section id="testimonial" class="section-padding bg-fixed bg-white overlay" style="background-image: url(img/bg-white.jpg);">
     <div class="container">
-        <div class="section-content" data-aos="fade-up">
+        <div class="section-content" >
             <div class="heading-section text-center">
                 <h2>
                     User Testimonials
@@ -342,7 +363,7 @@
                         <div class="grid-sizer"></div>
                         <div class="gutter-sizer"></div>
                         <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" data-aos="fade-up">
+                        <div class="grid-item minimalism" >
                             <div class="grid-item-wrapper">
                                 <img src="img/portfolio.png" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -363,7 +384,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" data-aos="fade-up">
+                        <div class="grid-item minimalism" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Nab%20.png" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -384,7 +405,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item minimalism grid-item-height" data-aos="fade-up">
+                        <div class="grid-item minimalism grid-item-height" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Pooltogether.png" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -405,7 +426,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" data-aos="fade-up">
+                        <div class="grid-item minimalism" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Silisun.png" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -426,7 +447,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item creative" data-aos="fade-up">
+                        <div class="grid-item creative" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Python%20Bot.png" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -447,7 +468,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item vintage" data-aos="fade-up">
+                        <div class="grid-item vintage" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Flip%20N%20Run.jpeg" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -478,7 +499,7 @@
 <!-- End of Portfolio Section -->	<!-- Client Section -->
 <section id="client" class="overlay bg-fixed" style="background-image: url(img/bg.jpg);">
     <div class="container">
-        <div class="section-content" data-aos="fade-up">
+        <div class="section-content" >
             <div class="row ">
                 <div class="col-md-12">
                     <!-- Section Title -->
@@ -515,7 +536,7 @@
 <section id="reservation" class="bg-white section-content">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 offset-lg-1 mb-5 mb-lg-0" data-aos="fade-right">
+            <div class="col-lg-5 offset-lg-1 mb-5 mb-lg-0" >
                 <div class="bg-white p-5 shadow">
                     <div class="heading-section text-center">
                         <h2 class="mb-4">
@@ -546,7 +567,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4 offset-lg-1" data-aos="fade-left">
+            <div class="col-lg-4 offset-lg-1" >
                 <h2 class="mb-4">
                     Best solution to create any website.
                 </h2>
@@ -583,7 +604,7 @@
 <!-- End of Reservation Section -->	<!-- Features Section-->
 <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
     <div class="container">
-        <div class="section-content" data-aos="fade-up">
+        <div class="section-content" >
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2 class="mb-2">Get a beautiful website that perfectly matches your vision</h2>
@@ -602,7 +623,7 @@
          		
          	</div>
          	<div class="col-lg-4 col-md-12 d-flex align-items-center">
-         		<p class="mx-auto text-center mb-0">&copy; 2023 All Rights Reserved by <a href="https://gettemplates.co" target="_blank">Shivansh Dengla</a>.</p>
+         		<p class="mx-auto text-center mb-0">&copy; 2024 All Rights Reserved by <a href="https://gettemplates.co" target="_blank">Shivansh Dengla</a>.</p>
          	</div>
            
             <div class="col-lg-4 col-md-12">
@@ -642,5 +663,37 @@
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
 	<script src="//localhost:35729/livereload.js"></script>
+
+    <script>
+        // Lazy load images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy-load");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+
+        // Initialize AOS with custom settings
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
