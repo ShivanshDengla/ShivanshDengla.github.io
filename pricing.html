@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add the same head content as other pages -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pricing | Professional Web Development Services</title>
+    <meta name="description" content="Affordable web development pricing packages. Choose from our Basic, Pro, and Enterprise plans to get your perfect website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        
+        * {
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        /* Body */
+        body {
+            margin: 0;  /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background: #ff00cc;
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+            background: linear-gradient(to right, #333399, #ff00cc);
+        }
+
+        .container {
+            max-width: 1200px;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Footer adjustments */
+        .mastfoot {
+            width: 100%;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            margin-top: 50px;
+        }
+
+        .mastfoot .nav-link {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mastfoot .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        .mastfoot p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .mastfoot a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .mastfoot .row {
+            align-items: center;
+        }
+
+        /* Card Themes - Start */
+        .basic .pricing-header {
+            background-color: #4b7bec;
+        }
+        .basic .price-circle {
+            border: 10px solid #4b7bec;
+            transition: all 0.4s;
+        }
+        .basic:hover .price-circle {
+            border-width: 5px;
+        }
+        .basic .buy-now:hover {
+            background-image: none !important;
+            background-color: #4b7bec !important;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .eco .pricing-header {
+            background-color: #f7b731;
+        }
+        .eco .price-circle {
+            border: 10px solid #f7b731;
+            transition: all 0.4s;
+        }
+        .eco:hover .price-circle {
+            border-width: 5px;
+        }
+        .eco .buy-now:hover {
+            background-image: none !important;
+            background-color: #f7b731 !important;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .pro .pricing-header {
+            background-color: #26de81;
+        }
+        .pro .price-circle {
+            border: 10px solid #26de81;
+            transition: all 0.4s;
+        }
+        .pro:hover .price-circle {
+            border-width: 5px;
+        }
+        .pro .buy-now:hover {
+            background-image: none !important;
+            background-color: #26de81 !important;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .business .pricing-header {
+            background-color: #a55eea;
+        }
+        .business .price-circle {
+            border: 10px solid #a55eea;
+            transition: all 0.4s;
+        }
+        .business:hover .price-circle {
+            border-width: 5px;
+        }
+        .business .buy-now:hover {
+            background-image: none !important;
+            background-color: #a55eea !important;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Card Themes - End */
+        .column {
+            flex: 25%;
+            padding: 10px;
+            width: calc(33.3% - 30px);
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 980px) {
+            .column {
+                flex: 50%;
+                display: block;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .column {
+                flex: 100%;
+                display: block;
+            }
+        }
+
+        .pricing-card {
+            -webkit-transition: 0.4s background-color ease;
+            -ms-transition: 0.4s background-color ease;
+            transition: 0.4s background-color ease;
+            height: 725px; /* Increased height to fit all content */
+            background-color: white;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.4s;
+        }
+        .pricing-card:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+        .pricing-card .popular {
+            display: none; /* Hide the old popular banner */
+        }
+        .pricing-card .badge-box {
+            padding: 0 40px;
+            margin-top: 80px;
+        }
+        .pricing-card .badge-box span {
+            display: inline-block;
+            border: 1px solid #4b7bec;
+            padding: 4px 12px;
+            border-radius: 25px;
+            overflow: hidden;
+            color: #4b7bec;
+            font-weight: bold;
+        }
+        .pricing-card .pricing-header {
+            width: 100%;
+            height: 150px;
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            -webkit-border-radius: 20px 20px 0 0;
+            -moz-border-radius: 20px 20px 0 0;
+        }
+        .pricing-card .pricing-header .plan-title {
+            font-size: 24px;
+            color: white;
+            position: relative;
+            top: 25%;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .pricing-card .pricing-header .price-circle {
+            width: 130px; /* Increased width */
+            height: 130px; /* Increased height */
+            border-radius: 100%;
+            left: calc(50% - 65px);
+            top: 60%;
+            background-color: white;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .pricing-card .pricing-header .price-circle .info {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            color: gray;
+            margin-top: 5px;
+        }
+        .pricing-card .pricing-header .price-circle .price-title {
+            display: block;
+            font-size: 22px; /* Reduced font size */
+            padding: 20px 0 0;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .pricing-card .pricing-header .price-circle .price-title small {
+            font-size: 16px;
+        }
+        .pricing-card .pricing-header h2 {
+            position: relative;
+            top: 40%;
+            color: #fff;
+        }
+        .pricing-card ul {
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+        .pricing-card ul li {
+            list-style-type: none;
+            display: block;
+            padding: 15px 0 15px 0;
+            margin: 0;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .pricing-card ul li:last-child {
+            margin-bottom: 15px;
+        }
+        .pricing-card ul li strong {
+            color: #333;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .pricing-card ul li .price-highlight {
+            font-weight: 700;
+            color: #222;
+        }
+        .pricing-card ul li del {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .pricing-card ul li .current-price {
+            font-weight: 700;
+            color: #2ecc71;
+            font-size: 1.1em;
+        }
+        .pricing-card .buy-button-box {
+            width: 100%;
+            float: left;
+            margin-top: 30px;
+            position: relative;
+            bottom: 20px;
+        }
+        .pricing-card .buy-button-box .buy-now {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-image: linear-gradient(to left, #a55eea, #45aaf2);
+            margin-top: 20px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .pricing-card .buy-button-box .buy-now:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Badge box colors */
+        .basic .badge-box span {
+            border-color: #4b7bec;
+            color: #4b7bec;
+        }
+        .eco .badge-box span {
+            border-color: #f7b731;
+            color: #f7b731;
+        }
+        .pro .badge-box span {
+            border-color: #26de81;
+            color: #26de81;
+        }
+        .business .badge-box span {
+            border-color: #a55eea;
+            color: #a55eea;
+        }
+
+        /* Add these responsive styles for the pricing title */
+        .jumbotron h1 {
+            font-size: 4rem;
+            color: #fff;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .jumbotron h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .jumbotron h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Add diagonal ribbon badge */
+        .ribbon {
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 75px;
+            text-align: right;
+        }
+        .ribbon span {
+            font-size: 10px;
+            font-weight: bold;
+            color: #FFF;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 20px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            width: 100px;
+            display: block;
+            background: #F79E05;
+            background: linear-gradient(#F7BE05 0%, #D67E04 100%);
+            box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 19px;
+            right: -21px;
+        }
+        .ribbon span::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #D67E04;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #D67E04;
+        }
+        .ribbon span::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid #D67E04;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #D67E04;
+        }
+        
+        /* Remove the pro-specific ribbon styling since we're using gold for all */
+        .pro .ribbon span {
+            background: linear-gradient(#F7BE05 0%, #D67E04 100%);
+        }
+        .pro .ribbon span::before {
+            border-left-color: #D67E04;
+            border-top-color: #D67E04;
+        }
+        .pro .ribbon span::after {
+            border-right-color: #D67E04;
+            border-top-color: #D67E04;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+    <!-- Add the same navbar as other pages -->
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white" href="/">
+                <h3 class="font-weight-bolder mb-0">SHIVANSH</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="lnr lnr-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-nav-header">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add jumbotron with background elements -->
+    <div class="jumbotron d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">PRICING</h1>
+        </div>
+        <div class="rectangle-1"></div>
+        <div class="rectangle-2"></div>
+        <div class="rectangle-transparent-1"></div>
+        <div class="rectangle-transparent-2"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="triangle triangle-1">
+            <img src="img/obj_triangle.png" alt="">
+        </div>
+        <div class="triangle triangle-2">
+            <img src="img/obj_triangle.png" alt="">
+        </div>
+        <div class="triangle triangle-3">
+            <img src="img/obj_triangle.png" alt="">
+        </div>
+        <div class="triangle triangle-4">
+            <img src="img/obj_triangle.png" alt="">
+        </div>
+    </div>
+
+    <!-- Your existing pricing content -->
+    <div class="container">
+        <div class="column">
+            <div class="pricing-card basic">
+                <div class="pricing-header">
+                    <span class="plan-title">1-MONTH PLAN</span>
+                    <div class="price-circle">
+                        <span class="price-title">
+                            <small>₹</small><span>30,597</span>
+                        </span>
+                        <span class="info">Trial Run</span>
+                    </div>
+                </div>
+                <div class="badge-box">
+                    <span>No Discount</span>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Website Development</strong>
+                        <span class="price-highlight">₹22,999</span>
+                    </li>
+                    <li>
+                        <strong>Website Maintenance</strong>
+                        + Hosting + Domain<br>
+                        <span class="price-highlight">₹1,599</span>/month
+                    </li>
+                    <li>
+                        <strong>Social Media Management</strong>
+                        <span class="price-highlight">₹5,999</span>/month
+                    </li>
+                    <li>
+                        <strong>10 Posts + 3 Reels</strong>
+                        per month
+                    </li>
+                </ul>
+                <div class="buy-button-box">
+                    <a href="#" class="buy-now" data-plan="1-MONTH PLAN" data-price="₹30,597">GET STARTED</a>
+                </div>        
+            </div>
+        </div>
+        <div class="column">
+            <div class="pricing-card eco">
+                <div class="pricing-header">
+                    <span class="plan-title">3-MONTH PLAN</span>
+                    <div class="price-circle">
+                        <span class="price-title">
+                            <small>₹</small><span>37,998</span>
+                        </span>
+                        <span class="info">Growth Pack</span>
+                    </div>
+                </div>
+                <div class="badge-box">
+                    <span>Save 15%</span>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Website Development</strong>
+                        <del>₹22,999</del> <span class="current-price">₹20,999</span>
+                    </li>
+                    <li>
+                        <strong>Website Maintenance</strong>
+                        + Hosting + Domain<br>
+                        <del>₹1,599</del> <span class="current-price">₹1,199</span>/month
+                    </li>
+                    <li>
+                        <strong>Social Media Management</strong>
+                        <del>₹5,999</del> <span class="current-price">₹4,467</span>/month
+                    </li>
+                    <li>
+                        <strong>10 Posts + 3 Reels</strong>
+                        per month
+                    </li>
+                </ul>
+                <div class="buy-button-box">
+                    <a href="#" class="buy-now" data-plan="3-MONTH PLAN" data-price="₹37,998">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pricing-card pro">
+                <div class="popular">POPULAR</div>
+                <div class="ribbon"><span>POPULAR</span></div>
+                <div class="pricing-header">
+                    <span class="plan-title">6-MONTH PLAN</span>
+                    <div class="price-circle">
+                        <span class="price-title">
+                            <small>₹</small><span>59,998</span>
+                        </span>
+                        <span class="info">Serious Business</span>
+                    </div>
+                </div>
+                <div class="badge-box">
+                    <span>Save 23%</span>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Website Development</strong>
+                        <del>₹22,999</del> <span class="current-price">₹18,999</span>
+                    </li>
+                    <li>
+                        <strong>Website Maintenance</strong>
+                        + Hosting + Domain<br>
+                        <del>₹1,599</del> <span class="current-price">₹1,133</span>/month
+                    </li>
+                    <li>
+                        <strong>Social Media Management</strong>
+                        <del>₹5,999</del> <span class="current-price">₹4,200</span>/month
+                    </li>
+                    <li>
+                        <strong>10 Posts + 3 Reels</strong>
+                        per month
+                    </li>
+                </ul>
+                <div class="buy-button-box">
+                    <a href="#" class="buy-now" data-plan="6-MONTH PLAN" data-price="₹59,998">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="pricing-card business">
+                <div class="pricing-header">
+                    <span class="plan-title">12-MONTH PLAN</span>
+                    <div class="price-circle">
+                        <span class="price-title">
+                            <small>₹</small><span>100,495</span>
+                        </span>
+                        <span class="info">Best Value</span>
+                    </div>
+                </div>
+                <div class="badge-box">
+                    <span>Save 30%</span>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Website Development</strong>
+                        <del>₹22,999</del> <span class="current-price">₹16,999</span>
+                    </li>
+                    <li>
+                        <strong>Website Maintenance</strong>
+                        + Hosting + Domain<br>
+                        <del>₹1,599</del> <span class="current-price">₹1,125</span>/month
+                    </li>
+                    <li>
+                        <strong>Social Media Management</strong>
+                        <del>₹5,999</del> <span class="current-price">₹4,166</span>/month
+                    </li>
+                    <li>
+                        <strong>10 Posts + 3 Reels</strong>
+                        per month
+                    </li>
+                </ul>
+                <div class="buy-button-box">
+                    <a href="#" class="buy-now" data-plan="12-MONTH PLAN" data-price="₹100,495">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plan Selection Modal -->
+    <div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="planModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="planModalLabel">Get Started with <span id="selectedPlan"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="planForm">
+                        <input type="hidden" name="access_key" value="a58c6aee-ef24-4a45-89ad-84f97e27a278">
+                        <input type="hidden" name="from_name" value="Shivansh Dengla Pricing Form">
+                        <input type="hidden" name="selected_plan" id="planField" value="">
+                        <input type="hidden" name="plan_price" id="priceField" value="">
+                        
+                        <div class="form-group">
+                            <label for="businessName">Business/Individual Name</label>
+                            <input type="text" class="form-control" id="businessName" name="business_name" placeholder="Your business or name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information (Optional)</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any specific requirements or questions?"></textarea>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Please Wait Modal -->
+    <div class="modal fade" id="waitModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p>Please wait...</p>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h5 class="modal-title">Success!</h5>
+                    <p>Your request has been sent successfully. We'll get back to you shortly!</p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="vendor/bootstrap/popper.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendor/stellar/jquery.stellar.js"></script>
+    <script src="vendor/isotope/isotope.min.js"></script>
+    <script src="vendor/lightcase/lightcase.js"></script>
+    <script src="vendor/waypoints/waypoint.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/app.min.js"></script>
+    
+    <!-- Plan Selection Script -->
+    <script>
+        $(document).ready(function() {
+            // Handle click on "GET STARTED" buttons
+            $('.buy-now').on('click', function(e) {
+                e.preventDefault();
+                
+                // Get the plan details from data attributes
+                const plan = $(this).data('plan');
+                const price = $(this).data('price');
+                
+                // Set the values in the modal and hidden form fields
+                $('#selectedPlan').text(plan);
+                $('#planField').val(plan);
+                $('#priceField').val(price);
+                
+                // Show the modal
+                $('#planModal').modal('show');
+            });
+            
+            // Handle form submission
+            $('#planForm').on('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                
+                // Show the "Please wait" modal
+                $('#planModal').modal('hide');
+                $('#waitModal').modal('show');
+                
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        // Close the "Please wait" modal and show the success modal
+                        $('#waitModal').modal('hide');
+                        $('#successModal').modal('show');
+                    } else {
+                        console.log(response);
+                        alert(json.message || "Something went wrong!");
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert("Something went wrong!");
+                })
+                .then(function() {
+                    document.getElementById('planForm').reset();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
