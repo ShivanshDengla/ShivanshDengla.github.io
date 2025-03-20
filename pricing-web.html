@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pricing | Professional Web Development Services</title>
-    <meta name="description" content="Affordable web development pricing packages. Choose from our Basic, Pro, and Enterprise plans to get your perfect website.">
+    <title>Web Development Pricing | Professional Web Development Services</title>
+    <meta name="description" content="Affordable web development and maintenance pricing packages. Choose from our monthly, quarterly, bi-annual, or annual plans.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -62,11 +62,7 @@
 
         /* Footer adjustments */
         .mastfoot {
-            width: 100%;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            margin-top: 50px;
+            display: none;
         }
 
         .mastfoot .nav-link {
@@ -183,7 +179,7 @@
             -webkit-transition: 0.4s background-color ease;
             -ms-transition: 0.4s background-color ease;
             transition: 0.4s background-color ease;
-            height: 615px; /* Increased height to fit all content */
+            height: 825px; /* Increased height to fit all content */
             background-color: white;
             -moz-border-radius: 20px;
             -webkit-border-radius: 20px;
@@ -430,7 +426,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
-
+        
         .dev-cost-banner h2 {
             font-size: 2.5rem;
             color: #fff;
@@ -438,7 +434,7 @@
             font-weight: 700;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-
+        
         .dev-cost-banner p {
             font-size: 1.2rem;
             color: #fff;
@@ -447,7 +443,7 @@
             margin: 0 auto;
             line-height: 1.6;
         }
-
+        
         @media screen and (max-width: 768px) {
             .dev-cost-banner h2 {
                 font-size: 2rem;
@@ -456,6 +452,28 @@
             .dev-cost-banner p {
                 font-size: 1rem;
             }
+        }
+        
+        /* Feature list styling */
+        .pricing-card ul li i {
+            color: #2ecc71;
+            margin-right: 5px;
+        }
+        
+        .pricing-card ul li.feature-item {
+            text-align: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-card .feature-title {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: -5px;
         }
     </style>
 </head>
@@ -492,7 +510,7 @@
     <!-- Add jumbotron with background elements -->
     <div class="jumbotron d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-4 mb-4">PRICING</h1>
+            <h1 class="display-4 mb-4">WEB DEVELOPMENT PRICING</h1>
         </div>
         <div class="rectangle-1"></div>
         <div class="rectangle-2"></div>
@@ -521,7 +539,7 @@
         <p>Get a professionally designed, fully responsive website tailored to your business needs. Our development package includes custom design, mobile optimization, and all the essential features to make your online presence stand out.</p>
     </div>
 
-    <!-- Your existing pricing content -->
+    <!-- Maintenance & Hosting Pricing -->
     <div class="container">
         <div class="column">
             <div class="pricing-card basic">
@@ -529,7 +547,7 @@
                     <span class="plan-title">1-MONTH PLAN</span>
                     <div class="price-circle">
                         <span class="price-title">
-                            <small>₹</small><span>7,599</span>
+                            <small>₹</small><span>2,499</span>
                         </span>
                         <span class="info">Monthly</span>
                     </div>
@@ -539,20 +557,20 @@
                 </div>
                 <ul>
                     <li>
-                        <strong>Website Maintenance</strong>
-                        + Hosting + Domain<br>
-                        <span class="price-highlight">₹1,599</span>/month
+                        <strong>Maintenance & Hosting</strong>
+                        <span class="price-highlight">₹2,499</span>/month
                     </li>
-                    <li>
-                        <strong>Social Media Management</strong>
-                        <span class="price-highlight">₹5,999</span>/month
-                    </li>
-                    <li>
-                        <strong>10 Posts + 3 Reels</strong>
-                    </li>
+                    <div class="feature-title">What's Included:</div>
+                    <li class="feature-item"><i class="fas fa-check"></i> Website Hosting</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Domain Name</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> SSL Certificate</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Basic SEO Setup</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Content Updates (2/month)</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Email Support</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Weekly Backups</li>
                 </ul>
                 <div class="buy-button-box">
-                    <a href="#" class="buy-now" data-plan="1-MONTH PLAN" data-price="₹7,599">GET STARTED</a>
+                    <a href="#" class="buy-now" data-plan="1-MONTH MAINTENANCE" data-price="₹2,499">GET STARTED</a>
                 </div>        
             </div>
         </div>
@@ -562,30 +580,30 @@
                     <span class="plan-title">3-MONTH PLAN</span>
                     <div class="price-circle">
                         <span class="price-title">
-                            <small>₹</small><span>16,999</span>
+                            <small>₹</small><span>6,999</span>
                         </span>
                         <span class="info">Quarterly</span>
                     </div>
                 </div>
                 <div class="badge-box">
-                    <span>Save 15%</span>
+                    <span>Save 7%</span>
                 </div>
                 <ul>
                     <li>
-                        <strong>Website Maintenance</strong>
-                        + Hosting + Domain<br>
-                        <del>₹1,599</del> <span class="current-price">₹1,199</span>/month
+                        <strong>Maintenance & Hosting</strong>
+                        <span class="price-highlight">₹2,333</span>/month
                     </li>
-                    <li>
-                        <strong>Social Media Management</strong>
-                        <del>₹5,999</del> <span class="current-price">₹4,467</span>/month
-                    </li>
-                    <li>
-                        <strong>30 Posts + 9 Reels</strong>
-                    </li>
+                    <div class="feature-title">What's Included:</div>
+                    <li class="feature-item"><i class="fas fa-check"></i> Website Hosting</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Domain Name</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> SSL Certificate</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Standard SEO Optimization</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Content Updates (5/month)</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Priority Email Support</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Daily Backups</li>
                 </ul>
                 <div class="buy-button-box">
-                    <a href="#" class="buy-now" data-plan="3-MONTH PLAN" data-price="₹16,999">GET STARTED</a>
+                    <a href="#" class="buy-now" data-plan="3-MONTH MAINTENANCE" data-price="₹6,999">GET STARTED</a>
                 </div>
             </div>
         </div>
@@ -596,30 +614,30 @@
                     <span class="plan-title">6-MONTH PLAN</span>
                     <div class="price-circle">
                         <span class="price-title">
-                            <small>₹</small><span>31,999</span>
+                            <small>₹</small><span>12,999</span>
                         </span>
                         <span class="info">Bi-Annual</span>
                     </div>
                 </div>
                 <div class="badge-box">
-                    <span>Save 23%</span>
+                    <span>Save 13%</span>
                 </div>
                 <ul>
                     <li>
-                        <strong>Website Maintenance</strong>
-                        + Hosting + Domain<br>
-                        <del>₹1,599</del> <span class="current-price">₹1,133</span>/month
+                        <strong>Maintenance & Hosting</strong>
+                        <span class="price-highlight">₹2,167</span>/month
                     </li>
-                    <li>
-                        <strong>Social Media Management</strong>
-                        <del>₹5,999</del> <span class="current-price">₹4,200</span>/month
-                    </li>
-                    <li>
-                        <strong>60 Posts + 18 Reels</strong>
-                    </li>
+                    <div class="feature-title">What's Included:</div>
+                    <li class="feature-item"><i class="fas fa-check"></i> Premium Website Hosting</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Domain Name</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> SSL Certificate</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Advanced SEO Optimization</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Content Updates (10/month)</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> 24/7 Email & Phone Support</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Daily Backups + CDN</li>
                 </ul>
                 <div class="buy-button-box">
-                    <a href="#" class="buy-now" data-plan="6-MONTH PLAN" data-price="₹31,999">GET STARTED</a>
+                    <a href="#" class="buy-now" data-plan="6-MONTH MAINTENANCE" data-price="₹12,999">GET STARTED</a>
                 </div>
             </div>
         </div>
@@ -629,30 +647,30 @@
                     <span class="plan-title">12-MONTH PLAN</span>
                     <div class="price-circle">
                         <span class="price-title">
-                            <small>₹</small><span>63,499</span>
+                            <small>₹</small><span>21,999</span>
                         </span>
                         <span class="info">Annual</span>
                     </div>
                 </div>
                 <div class="badge-box">
-                    <span>Save 30%</span>
+                    <span>Save 27%</span>
                 </div>
                 <ul>
                     <li>
-                        <strong>Website Maintenance</strong>
-                        + Hosting + Domain<br>
-                        <del>₹1,599</del> <span class="current-price">₹1,125</span>/month
+                        <strong>Maintenance & Hosting</strong>
+                        <span class="price-highlight">₹1,833</span>/month
                     </li>
-                    <li>
-                        <strong>Social Media Management</strong>
-                        <del>₹5,999</del> <span class="current-price">₹4,166</span>/month
-                    </li>
-                    <li>
-                        <strong>120 Posts + 36 Reels</strong>
-                    </li>
+                    <div class="feature-title">What's Included:</div>
+                    <li class="feature-item"><i class="fas fa-check"></i> Enterprise Hosting</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Domain Name + Privacy</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Wildcard SSL Certificate</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Premium SEO Services</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Unlimited Content Updates</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> 24/7 Priority Support</li>
+                    <li class="feature-item"><i class="fas fa-check"></i> Daily Backups + CDN</li>
                 </ul>
                 <div class="buy-button-box">
-                    <a href="#" class="buy-now" data-plan="12-MONTH PLAN" data-price="₹63,499">GET STARTED</a>
+                    <a href="#" class="buy-now" data-plan="12-MONTH MAINTENANCE" data-price="₹21,999">GET STARTED</a>
                 </div>
             </div>
         </div>
@@ -671,7 +689,7 @@
                 <div class="modal-body">
                     <form action="https://api.web3forms.com/submit" method="POST" id="planForm">
                         <input type="hidden" name="access_key" value="a58c6aee-ef24-4a45-89ad-84f97e27a278">
-                        <input type="hidden" name="from_name" value="Shivansh Dengla Pricing Form">
+                        <input type="hidden" name="from_name" value="Shivansh Dengla Web Pricing Form">
                         <input type="hidden" name="selected_plan" id="planField" value="">
                         <input type="hidden" name="plan_price" id="priceField" value="">
                         <input type="hidden" name="final_price" id="finalPriceField" value="">
@@ -746,201 +764,230 @@
             </div>
         </div>
     </div>
-
-    <!-- Please Wait Modal -->
-    <div class="modal fade" id="waitModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <p>Please wait...</p>
-                    <div class="spinner-border" role="status">
-                        <span class="sr-only">Loading...</span>
+        <!-- Please Wait Modal -->
+        <div class="modal fade" id="waitModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <p>Please wait...</p>
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <h5 class="modal-title">Success!</h5>
-                    <p>Your request has been sent successfully. We'll get back to you shortly!</p>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+    
+        <!-- Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <h5 class="modal-title">Success!</h5>
+                        <p>Your request has been sent successfully. We'll get back to you shortly!</p>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- External JS -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script src="vendor/bootstrap/popper.min.js"></script>
-    <script src="vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-    <script src="vendor/stellar/jquery.stellar.js"></script>
-    <script src="vendor/isotope/isotope.min.js"></script>
-    <script src="vendor/lightcase/lightcase.js"></script>
-    <script src="vendor/waypoints/waypoint.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!-- Main JS -->
-    <script src="js/app.min.js"></script>
     
-    <!-- Plan Selection Script -->
-    <script>
-        $(document).ready(function() {
-            let basePrice = 0;
-            let quantity = 1;
-            let discount = 0;
-            let couponApplied = false;
-            const COUPON_CODE = "HXY987789";
-            const DISCOUNT_PERCENT = 15;
-            
-            // Update the total price display
-            function updatePriceDisplay() {
-                const rawPrice = basePrice * quantity;
-                const discountAmount = couponApplied ? (rawPrice * DISCOUNT_PERCENT / 100) : 0;
-                const totalPrice = rawPrice - discountAmount;
+        <!-- Footer -->
+        <footer class="mastfoot my-3">
+            <div class="inner container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 d-flex align-items-center">
+                        <p class="mx-auto text-center text-lg-left">© 2023 Shivansh Dengla. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-12 d-flex align-items-center">
+                        <p class="mx-auto text-center">
+                            <a href="privacy-policy.html" class="text-white">Privacy Policy</a> | 
+                            <a href="terms-of-service.html" class="text-white">Terms of Service</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <nav class="nav nav-mastfoot justify-content-center justify-content-lg-end">
+                            <a class="nav-link" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="nav-link" href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="nav-link" href="https://www.linkedin.com/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- External JS -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="vendor/bootstrap/popper.min.js"></script>
+        <script src="vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+        <script src="vendor/stellar/jquery.stellar.js"></script>
+        <script src="vendor/isotope/isotope.min.js"></script>
+        <script src="vendor/lightcase/lightcase.js"></script>
+        <script src="vendor/waypoints/waypoint.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+        <!-- Main JS -->
+        <script src="js/app.min.js"></script>
+        
+        <!-- Plan Selection Script -->
+        <script>
+            $(document).ready(function() {
+                let basePrice = 0;
+                let quantity = 1;
+                let discount = 0;
+                let couponApplied = false;
+                const COUPON_CODE = "HXY987789";
+                const DISCOUNT_PERCENT = 15;
                 
-                $('#planPrice').text(formatPrice(basePrice));
-                $('#qtyDisplay').text(quantity);
-                
-                if (couponApplied) {
-                    $('#discountRow').show();
-                    $('#discountAmount').text('-' + formatPrice(discountAmount));
-                } else {
-                    $('#discountRow').hide();
-                }
-                
-                $('#totalPrice').text(formatPrice(totalPrice));
-                $('#finalPriceField').val(formatPrice(totalPrice));
-            }
-            
-            // Format price as Indian Rupees
-            function formatPrice(price) {
-                return '₹' + price.toLocaleString('en-IN');
-            }
-            
-            // Extract numeric value from price string (₹7,599 -> 7599)
-            function extractPrice(priceString) {
-                return parseInt(priceString.replace(/[^\d]/g, ''));
-            }
-            
-            // Handle click on "GET STARTED" buttons
-            $('.buy-now').on('click', function(e) {
-                e.preventDefault();
-                
-                // Get the plan details from data attributes
-                const plan = $(this).data('plan');
-                const price = $(this).data('price');
-                
-                // Set the values in the modal and hidden form fields
-                $('#selectedPlan').text(plan);
-                $('#planField').val(plan);
-                $('#priceField').val(price);
-                $('#planName').text('Plan: ' + plan);
-                
-                // Reset form values
-                quantity = 1;
-                couponApplied = false;
-                $('#quantity').val(1);
-                $('#couponCode').val('');
-                $('#couponMessage').text('');
-                
-                // Set base price and update display
-                basePrice = extractPrice(price);
-                updatePriceDisplay();
-                
-                // Show the modal
-                $('#planModal').modal('show');
-            });
-            
-            // Quantity buttons
-            $('#increaseQty').on('click', function() {
-                if (quantity < 10) {
-                    quantity++;
-                    $('#quantity').val(quantity);
-                    updatePriceDisplay();
-                }
-            });
-            
-            $('#decreaseQty').on('click', function() {
-                if (quantity > 1) {
-                    quantity--;
-                    $('#quantity').val(quantity);
-                    updatePriceDisplay();
-                }
-            });
-            
-            // Manual quantity input
-            $('#quantity').on('change', function() {
-                quantity = parseInt($(this).val()) || 1;
-                if (quantity < 1) quantity = 1;
-                if (quantity > 10) quantity = 10;
-                $(this).val(quantity);
-                updatePriceDisplay();
-            });
-            
-            // Apply coupon code
-            $('#applyCoupon').on('click', function() {
-                const couponCode = $('#couponCode').val().trim();
-                
-                if (couponCode === COUPON_CODE) {
-                    couponApplied = true;
-                    $('#couponMessage').text(`Coupon applied! ${DISCOUNT_PERCENT}% discount`).removeClass('text-danger').addClass('text-success');
-                } else if (couponCode === '') {
-                    couponApplied = false;
-                    $('#couponMessage').text('');
-                } else {
-                    couponApplied = false;
-                    $('#couponMessage').text('Invalid coupon code').removeClass('text-success').addClass('text-danger');
-                }
-                
-                updatePriceDisplay();
-            });
-            
-            // Handle form submission
-            $('#planForm').on('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(this);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-                
-                // Show the "Please wait" modal
-                $('#planModal').modal('hide');
-                $('#waitModal').modal('show');
-                
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-                        // Close the "Please wait" modal and show the success modal
-                        $('#waitModal').modal('hide');
-                        $('#successModal').modal('show');
+                // Update the total price display
+                function updatePriceDisplay() {
+                    const rawPrice = basePrice * quantity;
+                    const discountAmount = couponApplied ? (rawPrice * DISCOUNT_PERCENT / 100) : 0;
+                    const totalPrice = rawPrice - discountAmount;
+                    
+                    $('#planPrice').text(formatPrice(basePrice));
+                    $('#qtyDisplay').text(quantity);
+                    
+                    if (couponApplied) {
+                        $('#discountRow').show();
+                        $('#discountAmount').text('-' + formatPrice(discountAmount));
                     } else {
-                        console.log(response);
-                        alert(json.message || "Something went wrong!");
+                        $('#discountRow').hide();
                     }
-                })
-                .catch(error => {
-                    console.log(error);
-                    alert("Something went wrong!");
-                })
-                .then(function() {
-                    document.getElementById('planForm').reset();
+                    
+                    $('#totalPrice').text(formatPrice(totalPrice));
+                    $('#finalPriceField').val(formatPrice(totalPrice));
+                }
+                
+                // Format price as Indian Rupees
+                function formatPrice(price) {
+                    return '₹' + price.toLocaleString('en-IN');
+                }
+                
+                // Extract numeric value from price string (₹7,599 -> 7599)
+                function extractPrice(priceString) {
+                    return parseInt(priceString.replace(/[^\d]/g, ''));
+                }
+                
+                // Handle click on "GET STARTED" buttons
+                $('.buy-now').on('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the plan details from data attributes
+                    const plan = $(this).data('plan');
+                    const price = $(this).data('price');
+                    
+                    // Set the values in the modal and hidden form fields
+                    $('#selectedPlan').text(plan);
+                    $('#planField').val(plan);
+                    $('#priceField').val(price);
+                    $('#planName').text('Plan: ' + plan);
+                    
+                    // Reset form values
+                    quantity = 1;
+                    couponApplied = false;
+                    $('#quantity').val(1);
+                    $('#couponCode').val('');
+                    $('#couponMessage').text('');
+                    
+                    // Set base price and update display
+                    basePrice = extractPrice(price);
+                    updatePriceDisplay();
+                    
+                    // Show the modal
+                    $('#planModal').modal('show');
+                });
+                
+                // Quantity buttons
+                $('#increaseQty').on('click', function() {
+                    if (quantity < 10) {
+                        quantity++;
+                        $('#quantity').val(quantity);
+                        updatePriceDisplay();
+                    }
+                });
+                
+                $('#decreaseQty').on('click', function() {
+                    if (quantity > 1) {
+                        quantity--;
+                        $('#quantity').val(quantity);
+                        updatePriceDisplay();
+                    }
+                });
+                
+                // Manual quantity input
+                $('#quantity').on('change', function() {
+                    quantity = parseInt($(this).val()) || 1;
+                    if (quantity < 1) quantity = 1;
+                    if (quantity > 10) quantity = 10;
+                    $(this).val(quantity);
+                    updatePriceDisplay();
+                });
+                
+                // Apply coupon code
+                $('#applyCoupon').on('click', function() {
+                    const couponCode = $('#couponCode').val().trim();
+                    
+                    if (couponCode === COUPON_CODE) {
+                        couponApplied = true;
+                        $('#couponMessage').text(`Coupon applied! ${DISCOUNT_PERCENT}% discount`).removeClass('text-danger').addClass('text-success');
+                    } else if (couponCode === '') {
+                        couponApplied = false;
+                        $('#couponMessage').text('');
+                    } else {
+                        couponApplied = false;
+                        $('#couponMessage').text('Invalid coupon code').removeClass('text-success').addClass('text-danger');
+                    }
+                    
+                    updatePriceDisplay();
+                });
+                
+                // Handle form submission
+                $('#planForm').on('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+                    
+                    // Show the "Please wait" modal
+                    $('#planModal').modal('hide');
+                    $('#waitModal').modal('show');
+                    
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            // Close the "Please wait" modal and show the success modal
+                            $('#waitModal').modal('hide');
+                            $('#successModal').modal('show');
+                        } else {
+                            console.log(response);
+                            alert(json.message || "Something went wrong!");
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        alert("Something went wrong!");
+                    })
+                    .then(function() {
+                        document.getElementById('planForm').reset();
+                    });
                 });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
