@@ -543,27 +543,6 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Silisun.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Silisun.png" title="Guitar">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://silisunventures.com/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Silisun Ventures - Renewable Energy Business</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
                         <div class="grid-item creative" >
                             <div class="grid-item-wrapper">
                                 <img src="img/Python%20Bot.png" alt="portfolio-img" class="portfolio-item">
@@ -810,6 +789,22 @@
             easing: 'ease-in-out',
             once: true,
             offset: 100
+        });
+
+        // Ensure portfolio shows all items by default
+        $(document).ready(function() {
+            // Wait for Isotope to initialize, then show all items
+            setTimeout(function() {
+                if ($('.grid-portfolio').length && typeof $.fn.isotope !== 'undefined') {
+                    $('.grid-portfolio').isotope({ filter: '*' });
+                    // Ensure all grid items are visible
+                    $('.grid-item').show().css({
+                        'opacity': '1',
+                        'transform': 'scale(1)',
+                        'display': 'block'
+                    });
+                }
+            }, 500);
         });
     </script>
 

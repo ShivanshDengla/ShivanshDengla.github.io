@@ -498,6 +498,11 @@ section {
 .grid-portfolio {
   overflow: hidden; }
 
+.grid-item {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease; }
+
 .gutter-sizer {
   width: 2%; }
 
@@ -508,7 +513,10 @@ section {
 .grid-item {
   margin-bottom: 20px;
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important; }
   .grid-item:hover .grid-info {
     top: 50%;
     opacity: 1; }
