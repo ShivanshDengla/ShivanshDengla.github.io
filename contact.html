@@ -50,9 +50,6 @@
   fbq('init', '632794939519207');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=632794939519207&ev=PageView&noscript=1"
-  /></noscript>
   <!-- End Meta Pixel Code -->
 
   <script>
@@ -61,6 +58,9 @@
 
 </head>
 <body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=632794939519207&ev=PageView&noscript=1"
+  /></noscript>
 	<div class="boxed-page">
 		<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
     <div class="container">
@@ -161,29 +161,36 @@
             <div class="row">
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4" >
-                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form" autocomplete="on">
                         <input type="hidden" name="access_key" value="a58c6aee-ef24-4a45-89ad-84f97e27a278">
+                        <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio Website">
                         <input type="hidden" name="from_name" value="Shivansh Dengla Contact Form">
+                        <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                                <label for="name" class="sr-only">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="name" aria-label="Your full name" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" aria-label="Your email address" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input type="tel" class="form-control" id="phoneNumber" name="phone" placeholder="Phone">
+                                <label for="phoneNumber" class="sr-only">Phone Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" name="phone" placeholder="Phone" autocomplete="tel" aria-label="Your phone number">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="websiteUrl" name="website" placeholder="Website/Company Name">
+                                <label for="websiteUrl" class="sr-only">Website or Company Name</label>
+                                <input type="text" class="form-control" id="websiteUrl" name="website" placeholder="Website/Company Name" autocomplete="url" aria-label="Your website or company name">
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..." required></textarea>
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..." autocomplete="off" aria-label="Your message" required></textarea>
                             </div>
                             <div class="col-md-12 text-center">
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit">Send Message</button>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" aria-label="Send message">Send Message</button>
                             </div>
-                            <div id="result"></div>
+                            <div id="result" role="alert" aria-live="polite"></div>
                         </div>
                     </form>
                 </div>
@@ -281,11 +288,25 @@
 	<script src="js/app.min.js "></script>
 	<script src="//localhost:35729/livereload.js"></script>
 	<script>
+		// Suppress browser extension errors gracefully
+		window.addEventListener('error', function(e) {
+			// Check if error is from browser extension (content_script.js)
+			if (e.filename && e.filename.includes('content_script.js')) {
+				e.preventDefault();
+				return false;
+			}
+		}, true);
+
 		const form = document.getElementById('form');
 const result = document.getElementById('result');
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
+  
+  // Clear previous errors
+  result.innerHTML = '';
+  result.style.display = 'none';
+  
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
@@ -302,25 +323,28 @@ form.addEventListener('submit', function(e) {
     body: json
   })
   .then(async (response) => {
-    let json = await response.json();
-    if (response.status == 200) {
+    const responseData = await response.json();
+    
+    if (response.ok && response.status === 200) {
       // Close the "Please wait" modal and show the success modal
       $('#waitModal').modal('hide');
       $('#successModal').modal('show');
+      form.reset();
     } else {
-      console.log(response);
-      result.innerHTML = json.message;
+      // Handle error response
+      $('#waitModal').modal('hide');
+      result.style.display = 'block';
+      result.style.color = 'red';
+      result.innerHTML = responseData.message || 'Failed to send message. Please try again.';
+      console.error('Form submission error:', responseData);
     }
   })
   .catch(error => {
-    console.log(error);
-    result.innerHTML = "Something went wrong!";
-  })
-  .then(function() {
-    form.reset();
-    setTimeout(() => {
-      result.style.display = "none";
-    }, 3000);
+    console.error('Network error:', error);
+    $('#waitModal').modal('hide');
+    result.style.display = 'block';
+    result.style.color = 'red';
+    result.innerHTML = 'Network error. Please check your connection and try again.';
   });
 });
 	</script>
