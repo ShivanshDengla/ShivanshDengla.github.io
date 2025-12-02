@@ -44,6 +44,389 @@
                 max-width: 80px;
             }
         }
+        
+        /* Portfolio Hero Slider Styles */
+        .portfolio-hero-slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to right, #333399, #ff00cc);
+        }
+        
+        .portfolio-hero-slider::before {
+            position: absolute;
+            display: block;
+            content: "";
+            opacity: 0.3;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #333399, #ff00cc);
+            z-index: 0;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .portfolio-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            transform: scale(1.1);
+        }
+        
+        .portfolio-slide.active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 2;
+        }
+        
+        .slide-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .slide-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        .portfolio-slide:hover .slide-image {
+            transform: scale(1.05);
+        }
+        
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(51, 51, 153, 0.7), rgba(255, 0, 204, 0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+        
+        .portfolio-slide:hover .slide-overlay {
+            opacity: 1;
+        }
+        
+        .slide-content {
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+            transform: translateY(20px);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        .portfolio-slide:hover .slide-content {
+            transform: translateY(0);
+        }
+        
+        .slide-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slide-description {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .slide-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .slide-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slide-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slider-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .slider-prev {
+            left: 30px;
+        }
+        
+        .slider-next {
+            right: 30px;
+        }
+        
+        .slider-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .indicator.active {
+            background: #fff;
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        
+        .indicator:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .portfolio-cta {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            text-align: center;
+        }
+        
+        .btn-contact-hero {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-contact-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .slide-title {
+                font-size: 2.5rem;
+            }
+            
+            .slide-description {
+                font-size: 1.2rem;
+            }
+            
+            .slider-nav {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .slider-prev {
+                left: 15px;
+            }
+            
+            .slider-next {
+                right: 15px;
+            }
+            
+            .portfolio-cta {
+                bottom: 80px;
+            }
+            
+            .btn-contact-hero {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .slide-title {
+                font-size: 2rem;
+            }
+            
+            .slide-description {
+                font-size: 1rem;
+            }
+            
+            .slide-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Navigation Bar Styles */
+        #header-navbar {
+            background: rgba(255, 0, 204, 0.5) !important;
+            background: linear-gradient(to right, rgba(51, 51, 153, 0.5), rgba(255, 0, 204, 0.5)) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+        
+        #header-navbar .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        @media (min-width: 1400px) {
+            #header-navbar .container {
+                max-width: 1300px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        #header-navbar .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem !important;
+            color: #fff !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        #header-navbar .navbar-nav .nav-link:hover {
+            color: #ff00cc !important;
+            transform: translateY(-2px);
+        }
+        
+        #header-navbar .navbar-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff !important;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 992px) {
+            #header-navbar {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            #header-navbar .navbar-nav .nav-link {
+                font-size: 1.1rem;
+                padding: 0.4rem 1.2rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar {
+                background: linear-gradient(to right, rgba(51, 51, 153, 0.7), rgba(255, 0, 204, 0.7)) !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 1.3rem;
+            }
+            
+            #header-navbar .navbar-collapse {
+                background: rgba(51, 51, 153, 0.8);
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+        }
+        
+        /* Animated Background Shapes for Portfolio Slider */
+        .portfolio-hero-slider .rectangle-1,
+        .portfolio-hero-slider .rectangle-2,
+        .portfolio-hero-slider .rectangle-transparent-1,
+        .portfolio-hero-slider .rectangle-transparent-2,
+        .portfolio-hero-slider .circle-1,
+        .portfolio-hero-slider .circle-2,
+        .portfolio-hero-slider .circle-3,
+        .portfolio-hero-slider .triangle {
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .portfolio-hero-slider .slider-container {
+            z-index: 2;
+        }
+        
+        .portfolio-hero-slider .slider-nav,
+        .portfolio-hero-slider .slider-indicators,
+        .portfolio-hero-slider .portfolio-cta {
+            z-index: 3;
+        }
     </style>
 
     <!-- Defer non-critical JavaScript -->
@@ -159,13 +542,209 @@
 		</form>
 	</div>-->
 	
-</div>	<div class="jumbotron d-flex align-items-center">
-  <div class="container text-center">
-    <h1 class="display-1 mb-4">WEB<br>DEV</h1>
+	</div>	<!-- Portfolio Hero Slider -->
+<div class="portfolio-hero-slider">
+  <div class="slider-container">
+    <!-- Slide 1 - NabVani -->
+    <div class="portfolio-slide active" data-project="NabVani - Audiobook App">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/nabvani-mobile.png">
+          <img src="img/nabvani.png" alt="NabVani App" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">NabVani</h2>
+            <p class="slide-description">Audiobook App</p>
+            <div class="slide-links">
+              <a href="https://apps.apple.com/in/app/nabvani/id6743040566" target="_blank" class="slide-link">
+                <i class="fab fa-app-store-ios"></i> App Store
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=org.nabindia.nabvani" target="_blank" class="slide-link">
+                <i class="fab fa-google-play"></i> Play Store
+              </a>
   </div>
-    <a href="#features" class="scroll-down">
-    <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 2 - Zentrack -->
+    <div class="portfolio-slide" data-project="Zentrack - Productivity App">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/zentrack-mobile.png">
+          <img src="img/zentrack.png" alt="Zentrack App" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">Zentrack</h2>
+            <p class="slide-description">Productivity App</p>
+            <div class="slide-links">
+              <a href="https://apps.apple.com/in/app/zentrack-productivity-app/id6743366183" target="_blank" class="slide-link">
+                <i class="fab fa-app-store-ios"></i> App Store
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.trickyhustle.zentrack" target="_blank" class="slide-link">
+                <i class="fab fa-google-play"></i> Play Store
+              </a>
+  </div>
+  </div>
+  </div>
+      </div>
+    </div>
+    
+    <!-- Slide 3 - Pooltime -->
+    <div class="portfolio-slide" data-project="Pooltime App">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/pooltime-mobile.png">
+          <img src="img/pooltime.png" alt="Pooltime App" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">Pooltime</h2>
+            <p class="slide-description">Mobile Friendly Frontend</p>
+            <div class="slide-links">
+              <a href="https://app.pooltogether.com/" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 4 - Wineth -->
+    <div class="portfolio-slide" data-project="Wineth - PoolTogether Charity Vault">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/wineth-mobile.png">
+          <img src="img/wineth.png" alt="Wineth" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">Wineth</h2>
+            <p class="slide-description">PoolTogether Charity Vault</p>
+            <div class="slide-links">
+              <a href="https://app.pooltogether.com/deposit/137/0x2aC049f07d56Ed04F84Ff80022A71a1A2d8cE19b" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 5 - NAB India -->
+    <div class="portfolio-slide" data-project="NAB India - NGO Website">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/nab-website-mobile.png">
+          <img src="img/nab-website.png" alt="NAB India Website" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">NAB India</h2>
+            <p class="slide-description">NGO Website</p>
+            <div class="slide-links">
+              <a href="https://nabindia.org.in/" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 6 - PoolTogether -->
+    <div class="portfolio-slide" data-project="PoolTogether Website">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/pooltogether-mobile.png">
+          <img src="img/Pooltogether.png" alt="PoolTogether Website" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">PoolTogether</h2>
+            <p class="slide-description">Website Translations</p>
+            <div class="slide-links">
+              <a href="https://pooltogether.com/" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 7 - SparkUp -->
+    <div class="portfolio-slide" data-project="SparkUp Solutions">
+      <div class="slide-image-wrapper">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/sparkup-mobile.png">
+          <img src="img/Sparkup.png" alt="SparkUp Solutions" class="slide-image">
+        </picture>
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">SparkUp Solutions</h2>
+            <p class="slide-description">Factory Setup Consulting</p>
+            <div class="slide-links">
+              <a href="https://sparkupth.com/" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 8 - Portfolio Website -->
+    <div class="portfolio-slide" data-project="Portfolio Website">
+      <div class="slide-image-wrapper">
+        <img src="img/portfolio.png" alt="Portfolio Website" class="slide-image">
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">Portfolio Website</h2>
+            <p class="slide-description">Custom Portfolio Design</p>
+            <div class="slide-links">
+              <a href="https://shrimayeedatta.github.io/" target="_blank" class="slide-link">
+                <i class="lnr lnr-link"></i> Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <button class="slider-nav slider-prev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="slider-nav slider-next" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Slide Indicators -->
+    <div class="slider-indicators">
+      <span class="indicator active" data-slide="0"></span>
+      <span class="indicator" data-slide="1"></span>
+      <span class="indicator" data-slide="2"></span>
+      <span class="indicator" data-slide="3"></span>
+      <span class="indicator" data-slide="4"></span>
+      <span class="indicator" data-slide="5"></span>
+      <span class="indicator" data-slide="6"></span>
+      <span class="indicator" data-slide="7"></span>
+    </div>
+  </div>
+  
+  <!-- Contact Us Button -->
+  <div class="portfolio-cta">
+    <a href="contact.html" class="btn btn-primary btn-lg btn-contact-hero">
+      <i class="fas fa-envelope"></i> Contact Us
     </a>
+  </div>
+  
+  <!-- Animated Background Shapes -->
   <div class="rectangle-1"></div>
   <div class="rectangle-2"></div>
   <div class="rectangle-transparent-1"></div>
@@ -174,16 +753,16 @@
   <div class="circle-2"></div>
   <div class="circle-3"></div>
   <div class="triangle triangle-1">
-  	<img src="img/obj_triangle.png" alt="">
+    <img src="img/obj_triangle.png" alt="">
   </div>
   <div class="triangle triangle-2">
-  	<img src="img/obj_triangle.png" alt="">
+    <img src="img/obj_triangle.png" alt="">
   </div>
   <div class="triangle triangle-3">
-  	<img src="img/obj_triangle.png" alt="">
+    <img src="img/obj_triangle.png" alt="">
   </div>
   <div class="triangle triangle-4">
-  	<img src="img/obj_triangle.png" alt="">
+    <img src="img/obj_triangle.png" alt="">
   </div>
 </div>	<!-- Features Section-->
 <section id="features" class="bg-white">
@@ -366,253 +945,7 @@
     </div>
 </section> -->
 <!-- End of Testimonial Section-->	<!-- Portfolio Section -->
-<section id="portfolio" class="bg-white">
-    <div class="container">
-        <div class="section-content">
-            <!-- Section Title -->
-            <div class="title-wrap">
-                <h2 class="section-title">Our <b>Awesome</b> Works</h2>
-                <p class="section-sub-title">Experience the excellence of our web design services through our impressive portfolio of website projects.</p>
-            </div>
-            <!-- End of Section Title -->
-            <div class="row">
-                <!-- Portfolio Holder -->
-                <div class="col-md-12 portfolio-holder mt-3">
-                    <!-- Btn Filter -->
-                    <div class="filter-button-group btn-filter d-flex justify-content-center">
-                        <a tabindex="0" class="is-checked" data-filter="*">Show All</a>
-                        <a tabindex="0" data-filter=".minimalism">Websites</a>
-                        <a tabindex="0" data-filter=".vintage">Mobile Apps</a>
-                        <a tabindex="0" data-filter=".creative">Custom Bots</a>
-                    </div>
-                    <!-- End of Btn Filter -->
-                    <!-- Portfolio Content -->
-                    <div class="grid-portfolio">
-                        <div class="grid-sizer"></div>
-                        <div class="gutter-sizer"></div>
 
-                        <!-- Portfolio Item - NabVani -->
-                        <div class="grid-item vintage">
-                            <div class="grid-item-wrapper">
-                                <img src="img/nabvani.png" alt="NabVani App" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/nabvani.png" title="NabVani App">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://apps.apple.com/in/app/nabvani/id6743040566" target="_blank" title="View on App Store">
-                                            <span class="fab fa-app-store-ios"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://play.google.com/store/apps/details?id=org.nabindia.nabvani" target="_blank" title="View on Play Store">
-                                            <span class="fab fa-google-play"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>NabVani - Audiobook App</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item - NabVani -->
-
-                        <!-- Portfolio Item - Zentrack -->
-                        <div class="grid-item vintage">
-                            <div class="grid-item-wrapper">
-                                <img src="img/zentrack.png" alt="Zentrack App" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/zentrack.png" title="Zentrack App">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://apps.apple.com/in/app/zentrack-productivity-app/id6743366183" target="_blank" title="View on App Store">
-                                            <span class="fab fa-app-store-ios"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://play.google.com/store/apps/details?id=com.trickyhustle.zentrack" target="_blank" title="View on Play Store">
-                                            <span class="fab fa-google-play"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Zentrack - Productivity App</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item - Zentrack -->
-
-                        <!-- Portfolio Item - Pooltime -->
-                        <div class="grid-item vintage" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/pooltime.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/pooltime.png" title="Pooltime App">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://app.pooltogether.com/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Pooltime App - Mobile Friendly Frontend</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Portfolio Item - Wineth -->
-                        <div class="grid-item minimalism" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/wineth.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/wineth.png" title="Wineth">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://app.pooltogether.com/deposit/137/0x2aC049f07d56Ed04F84Ff80022A71a1A2d8cE19b" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Wineth - PoolTogether Charity Vault</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Original portfolio items follow -->
-                        <div class="grid-item minimalism" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/portfolio.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/portfolio.png" title="Photo-1">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://shrimayeedatta.github.io/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Portfolio Website</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Nab%20.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Nab%20.png" title="Ship">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://nabindia.org.in/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>NAB India - NGO Website</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
-                        <div class="grid-item minimalism grid-item-height" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Pooltogether.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Pooltogether.png" title="Tracy Portrait">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://pooltogether.com/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>PoolTogether Website - Translations</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
-                        <div class="grid-item minimalism" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Sparkup.png" alt="SparkUp Solutions Website" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Sparkup.png" title="SparkUp Solutions Website">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://sparkupth.com/" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>SparkUp Solutions - Factory Setup Consulting</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
-                        <div class="grid-item creative" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Python%20Bot.png" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Python%20Bot.png" title="Bookself">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://github.com/ShivanshDengla/Content-Bot" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Python Bot of Pooltogether Server</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- End of Portfolio Item -->
-                        <!-- Portfolio Item -->
-                        <!-- <div class="grid-item vintage" >
-                            <div class="grid-item-wrapper">
-                                <img src="img/Flip%20N%20Run.jpeg" alt="portfolio-img" class="portfolio-item">
-                                <div class="grid-info">
-                                    <div class="grid-link d-flex justify-content-center">
-                                        <a class="img-pop" data-rel="lightcase" href="img/Flip%20N%20Run.jpeg" title="Guitar">
-                                            <span class="lnr lnr-move"></span>
-                                        </a>
-                                        <a class="ext-link" href="https://play.google.com/store/apps/details?id=com.ShivanshDengla.FlipNRun&hl=en&gl=US" target="_blank">
-                                            <span class="lnr lnr-link"></span>
-                                        </a>
-                                    </div>
-                                    <div class="grid-title">
-                                        <h4>Flip N Run - Mobile Game</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> -->
-                        <!-- End of Portfolio Item -->
-                    </div>
-                    <!-- End of Portfolio Content -->
-                </div>
-                <!-- End of Portfolio Holder -->
-            </div>
-        </div>
-    </div>
-</section>
 <!-- End of Portfolio Section -->	<!-- Client Section -->
 <section id="client" class="overlay bg-fixed" style="background-image: url(img/bg.jpg);">
     <div class="container">
@@ -812,9 +1145,125 @@
             offset: 100
         });
 
-        // Ensure portfolio shows all items by default
+        // Portfolio Hero Slider Functionality
         $(document).ready(function() {
-            // Wait for Isotope to initialize, then show all items
+            const slides = $('.portfolio-slide');
+            const indicators = $('.indicator');
+            let currentSlide = 0;
+            let autoScrollInterval;
+            const autoScrollDelay = 5000; // 5 seconds
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                slides.removeClass('active');
+                indicators.removeClass('active');
+                
+                if (index >= slides.length) {
+                    currentSlide = 0;
+                } else if (index < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = index;
+                }
+                
+                slides.eq(currentSlide).addClass('active');
+                indicators.eq(currentSlide).addClass('active');
+            }
+            
+            // Next slide
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+            
+            // Start auto-scrolling
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(nextSlide, autoScrollDelay);
+            }
+            
+            // Stop auto-scrolling
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+            }
+            
+            // Initialize slider
+            showSlide(0);
+            startAutoScroll();
+            
+            // Navigation arrows
+            $('.slider-next').on('click', function() {
+                stopAutoScroll();
+                nextSlide();
+                startAutoScroll();
+            });
+            
+            $('.slider-prev').on('click', function() {
+                stopAutoScroll();
+                prevSlide();
+                startAutoScroll();
+            });
+            
+            // Indicator clicks
+            indicators.on('click', function() {
+                stopAutoScroll();
+                const slideIndex = $(this).data('slide');
+                showSlide(slideIndex);
+                startAutoScroll();
+            });
+            
+            // Keyboard navigation
+            $(document).on('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    stopAutoScroll();
+                    prevSlide();
+                    startAutoScroll();
+                } else if (e.key === 'ArrowRight') {
+                    stopAutoScroll();
+                    nextSlide();
+                    startAutoScroll();
+                }
+            });
+            
+            // Pause auto-scroll on hover
+            $('.portfolio-hero-slider').on('mouseenter', function() {
+                stopAutoScroll();
+            }).on('mouseleave', function() {
+                startAutoScroll();
+            });
+            
+            // Touch swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            $('.slider-container').on('touchstart', function(e) {
+                touchStartX = e.originalEvent.touches[0].clientX;
+            });
+            
+            $('.slider-container').on('touchend', function(e) {
+                touchEndX = e.originalEvent.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    stopAutoScroll();
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    startAutoScroll();
+                }
+            }
+            
+            // Ensure portfolio shows all items by default
             setTimeout(function() {
                 if ($('.grid-portfolio').length && typeof $.fn.isotope !== 'undefined') {
                     $('.grid-portfolio').isotope({ filter: '*' });
