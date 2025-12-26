@@ -28,6 +28,14 @@
         <priority>0.9</priority>
     </url>
     
+    <!-- Blog Page -->
+    <url>
+        <loc>https://shivashdengla.com/blog.html</loc>
+        <lastmod>2025-01-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Pricing Pages -->
     <url>
         <loc>https://shivashdengla.com/pricing.html</loc>

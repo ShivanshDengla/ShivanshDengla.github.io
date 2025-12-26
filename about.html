@@ -15,8 +15,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Shivansh Dengla | Professional Web Developer & UI/UX Designer</title>
-    <meta name="description" content="Learn about Shivansh Dengla, a professional web developer with 7+ years of experience in creating stunning websites and UI/UX design. Specializing in responsive web development and custom solutions.">
+    <title>About | Professional Web Developer USA | Website Developer Portfolio</title>
+    <meta name="description" content="Shivansh Dengla is a professional web developer in USA with 7+ years experience building high-converting websites, landing pages, and SaaS platforms for startups and businesses.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
     <meta name="robots" content="index, follow">
@@ -53,6 +53,221 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <!-- Calendly CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
+    <style>
+        /* Navigation Bar Styles */
+        #header-navbar {
+            background: rgba(255, 0, 204, 0.5) !important;
+            background: linear-gradient(to right, rgba(51, 51, 153, 0.5), rgba(255, 0, 204, 0.5)) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+        
+        #header-navbar .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        @media (min-width: 1400px) {
+            #header-navbar .container {
+                max-width: 1300px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        #header-navbar .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem !important;
+            color: #fff !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        #header-navbar .navbar-nav .nav-link:hover {
+            color: #ff00cc !important;
+            transform: translateY(-2px);
+        }
+        
+        #header-navbar .navbar-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff !important;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 992px) {
+            #header-navbar {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            #header-navbar .navbar-nav .nav-link {
+                font-size: 1.1rem;
+                padding: 0.4rem 1.2rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar {
+                background: linear-gradient(to right, rgba(51, 51, 153, 0.7), rgba(255, 0, 204, 0.7)) !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 1.3rem;
+            }
+            
+            #header-navbar .navbar-collapse {
+                background: rgba(51, 51, 153, 0.8);
+                margin-top: 10px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            
+            #header-navbar .navbar-toggler {
+                border: none;
+                padding: 8px 12px;
+                background: transparent;
+                color: #fff;
+                cursor: pointer;
+            }
+            
+            #header-navbar .navbar-toggler:focus {
+                outline: 2px solid rgba(255, 255, 255, 0.5);
+                outline-offset: 2px;
+            }
+            
+            #header-navbar .navbar-toggler .lnr {
+                color: #fff;
+                font-size: 1.8rem;
+            }
+            
+            /* Sidebar menu from right */
+            #header-navbar .navbar-collapse {
+                position: fixed !important;
+                top: 0 !important;
+                right: -100% !important;
+                left: auto !important;
+                width: 280px !important;
+                height: 100vh !important;
+                background: linear-gradient(to right, rgba(51, 51, 153, 0.95), rgba(255, 0, 204, 0.95)) !important;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                margin: 0 !important;
+                padding: 80px 30px 30px !important;
+                border-radius: 0 !important;
+                transition: right 0.3s ease !important;
+                z-index: 9999 !important;
+                box-shadow: -2px 0 20px rgba(0, 0, 0, 0.3);
+                overflow-y: auto;
+            }
+            
+            #header-navbar .navbar-collapse.show {
+                right: 0 !important;
+                left: auto !important;
+            }
+            
+            #header-navbar .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            #header-navbar .navbar-nav .nav-item {
+                margin-bottom: 15px;
+            }
+            
+            #header-navbar .navbar-nav .nav-link {
+                padding: 15px 20px !important;
+                font-size: 1.2rem;
+                border-radius: 8px;
+                transition: background 0.3s ease;
+                display: block !important;
+                width: 100% !important;
+                pointer-events: auto !important;
+                z-index: 10000 !important;
+                position: relative;
+                cursor: pointer;
+                -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+            }
+            
+            #header-navbar .navbar-nav .nav-link:hover,
+            #header-navbar .navbar-nav .nav-link:active {
+                background: rgba(255, 255, 255, 0.1);
+                transform: none;
+            }
+            
+            #header-navbar .navbar-nav .nav-link:focus {
+                outline: 2px solid rgba(255, 255, 255, 0.5);
+                outline-offset: 2px;
+            }
+            
+            /* Overlay when menu is open */
+            .navbar-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 9998;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+            }
+            
+            .navbar-overlay.show {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
+        /* Calendly Button Styling */
+        .calendly-btn {
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        .calendly-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 0, 204, 0.3);
+        }
+        @media (max-width: 768px) {
+            .calendly-btn {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -120,15 +335,10 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="blog.html">Blog</a>
                 </li>
-
-                <li class="nav-item"></li>
-                    <a class="nav-link" href="index.html#portfolio">Projects</a>
-                </li>
-
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
                 <!--<li class="nav-item">
                     <a id="side-search-open" class="nav-link" href="#">
@@ -207,30 +417,27 @@
     <div class="container">
         <div class="section-content">
             <div class="title-wrap" >
-                <h2 class="section-title">Effortlessly Create Your <br><b> Online Presence</b></h2>
-                <p class="section-sub-title">Let us turn your online vision into reality with our effortless web development services.</p>
+                <h2 class="section-title">I Fix What's Broken</h2>
+                <p class="section-sub-title">Slow pages. Low conversions. Wasted ad spend. I fix that.</p>
             </div>
             
             <div class="row text-center">
                 <div class="col-md-4 col-sm-6" >
-                    <img class="rounded-circle" src="img/icons/animat-checkmark.gif" alt="Generic placeholder image" width="140" height="140">
-                    <h5 class="mb-4">Simple and Clean</h5>
-                    <p>Enjoy a simple and clean website design that showcases your content and provides a seamless user experience</p>
-                    <p><a class="btn btn-link" href="index.html#portfolio" role="button">View details</a></p>
+                    <img class="rounded-circle" src="img/icons/animat-checkmark.gif" alt="Conversion Optimization" width="140" height="140">
+                    <h5 class="mb-4">27% More Conversions</h5>
+                    <p>Real results. Not promises.</p>
                 </div>
                 <!-- /.col-md-4 col-sm-6  -->
                 <div class="col-md-4 col-sm-6"  data-aos-delay="200">
-                    <img class="rounded-circle" src="img/icons/animat-customize.gif" alt="Generic placeholder image" width="140" height="140">
-                    <h5 class="mb-4">Unlimited Revisions</h5>
-                    <p>We offer unlimited revisions until you're satisfied with your website. Our goal is to work closely with you to create a website that meets your needs and exceeds your expectations.</p>
-                    <p><a class="btn btn-link" href="index.html#portfolio" role="button">View details</a></p>
+                    <img class="rounded-circle" src="img/icons/animat-customize.gif" alt="Web3 Development" width="140" height="140">
+                    <h5 class="mb-4">Web3 Ready</h5>
+                    <p>Crypto dashboards & DeFi interfaces.</p>
                 </div>
                 <!-- /.col-md-4 col-sm-6  -->
                 <div class="col-md-4 col-sm-6"  data-aos-delay="400">
-                    <img class="rounded-circle" src="img/icons/animat-responsive.gif" alt="Generic placeholder image" width="140" height="140">
-                    <h5 class="mb-4">Fully Responsive</h5>
-                    <p>Our fully responsive design ensures that your website looks great on any device. Enjoy a seamless user experience across desktop, tablet, and mobile. </p>
-                    <p><a class="btn btn-link" href="index.html#portfolio" role="button">View details</a></p>
+                    <img class="rounded-circle" src="img/icons/animat-responsive.gif" alt="Production Ready" width="140" height="140">
+                    <h5 class="mb-4">Production-Ready</h5>
+                    <p>No MVPs. No quick fixes.</p>
                 </div>
                 <!-- /.col-md-4 col-sm-6  -->
             </div>
@@ -250,9 +457,9 @@
                     <div class="row align-items-center text-white">
 
                         <div class="col-md-4 offset-md-2 col-sm-6" >
-                            <h4 class="mb-4">Hi There!</h4>
-                            <p>Hey, I'm Shivansh Dengla, a freelance professional with 7 years of experience. I'm a curious and passionate learner, particularly interested in crypto and decentralized technology. I specialize in website development and love creating websites that are both visually appealing and highly functional. My goal is to help individuals and businesses grow their online presence and establish a strong personal brand. I take pride in delivering quality work that meets the unique needs of each client, and I'm always committed to exceeding their expectations. If you're looking for a reliable and skilled website developer, I'm here to help!</p>
-                            <a href="index.html#portfolio" class="btn btn-outline-primary">PROJECTS</a>
+                            <h4 class="mb-4">Your Landing Page Is Costing You Money</h4>
+                            <p>I'm Shivansh Dengla. I fix slow, non-converting landing pages for funded startups, Web3 teams, and SaaS founders. 7+ years building frontends that actually convert—not just look good.</p>
+                            <button class="btn btn-outline-primary calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button>
                         </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
                         <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="flip-right">
@@ -362,9 +569,9 @@
         <div class="section-content" >
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="mb-2">Get a beautiful website that perfectly matches your vision</h2>
-                    <p> Contact me now to discuss your website idea and receive a free prototype tailored to your needs!</p>
-                    <a href="contact.html" class="btn btn-outline-primary btn-lg">Get In Touch</a>
+                    <h2 class="mb-2">Ready to Fix Your Landing Page?</h2>
+                    <p>Book a call. Let's discuss your project.</p>
+                    <button class="btn btn-outline-primary btn-lg calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button>
                 </div>
             </div>
         </div>
@@ -421,8 +628,125 @@
 	<script src="vendor/waypoints/waypoint.min.js"></script>
 	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	 
+	<!-- Calendly JS -->
+	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+	 
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
 	<script src="//localhost:35729/livereload.js"></script>
+	 
+	<!-- Calendly Integration -->
+	<script>
+	    document.addEventListener('DOMContentLoaded', function() {
+	        const calendlyButtons = document.querySelectorAll('.calendly-btn');
+	        calendlyButtons.forEach(function(button) {
+	            button.addEventListener('click', function(e) {
+	                e.preventDefault();
+	                const url = this.getAttribute('data-calendly-url') || 'https://calendly.com/shivanshdengla/30min';
+	                Calendly.initPopupWidget({
+	                    url: url,
+	                    text: 'Book a Call',
+	                    color: '#ff00cc',
+	                    textColor: '#ffffff',
+	                    branding: true
+	                });
+	            });
+	        });
+	    });
+	    
+	    // Hamburger Menu Fix with Sidebar
+	    (function() {
+	        function initMobileMenu() {
+	            const navbarToggler = document.querySelector('.navbar-toggler');
+	            const navbarCollapse = document.querySelector('#navbar-nav-header');
+	            const body = document.body;
+	            
+	            if (!navbarToggler || !navbarCollapse) {
+	                setTimeout(initMobileMenu, 100);
+	                return;
+	            }
+	            
+	            // Create overlay if it doesn't exist
+	            let overlay = document.querySelector('.navbar-overlay');
+	            if (!overlay) {
+	                overlay = document.createElement('div');
+	                overlay.className = 'navbar-overlay';
+	                body.appendChild(overlay);
+	            }
+	            
+	            // Remove Bootstrap's default collapse behavior
+	            navbarToggler.setAttribute('data-toggle', '');
+	            
+	            // Toggle menu function
+	            function toggleMenu() {
+	                const isOpen = navbarCollapse.classList.contains('show');
+	                if (isOpen) {
+	                    navbarCollapse.classList.remove('show');
+	                    overlay.classList.remove('show');
+	                    navbarToggler.setAttribute('aria-expanded', 'false');
+	                    body.style.overflow = '';
+	                } else {
+	                    navbarCollapse.classList.add('show');
+	                    overlay.classList.add('show');
+	                    navbarToggler.setAttribute('aria-expanded', 'true');
+	                    body.style.overflow = 'hidden';
+	                }
+	            }
+	            
+	            // Hamburger button click - use both click and touchstart for mobile
+	            navbarToggler.addEventListener('click', function(e) {
+	                e.preventDefault();
+	                e.stopPropagation();
+	                toggleMenu();
+	            });
+	            
+	            navbarToggler.addEventListener('touchend', function(e) {
+	                e.preventDefault();
+	                e.stopPropagation();
+	                toggleMenu();
+	            });
+	            
+	            // Close menu when clicking overlay
+	            overlay.addEventListener('click', function(e) {
+	                e.preventDefault();
+	                e.stopPropagation();
+	                navbarCollapse.classList.remove('show');
+	                overlay.classList.remove('show');
+	                navbarToggler.setAttribute('aria-expanded', 'false');
+	                body.style.overflow = '';
+	            });
+	            
+	            overlay.addEventListener('touchend', function(e) {
+	                e.preventDefault();
+	                e.stopPropagation();
+	                navbarCollapse.classList.remove('show');
+	                overlay.classList.remove('show');
+	                navbarToggler.setAttribute('aria-expanded', 'false');
+	                body.style.overflow = '';
+	            });
+	            
+	            // Close menu when clicking nav links - don't prevent navigation
+	            const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+	            navLinks.forEach(function(link) {
+	                // Use click event - don't prevent default so navigation works
+	                link.addEventListener('click', function(e) {
+	                    // Close menu after a short delay to allow navigation
+	                    setTimeout(function() {
+	                        navbarCollapse.classList.remove('show');
+	                        overlay.classList.remove('show');
+	                        navbarToggler.setAttribute('aria-expanded', 'false');
+	                        body.style.overflow = '';
+	                    }, 150);
+	                });
+	            });
+	        }
+	        
+	        if (document.readyState === 'loading') {
+	            document.addEventListener('DOMContentLoaded', initMobileMenu);
+	        } else {
+	            initMobileMenu();
+	        }
+	    })();
+	</script>
 </body>
 </html>

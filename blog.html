@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - Deferred -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QJL5XWSLSW');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJL5XWSLSW" defer></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Development Blog | Landing Page Tips, Website Optimization USA</title>
+    <meta name="description" content="Expert web development tips for US businesses. Learn landing page optimization, website speed, conversion strategies, and how to improve your website's performance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Shivansh Dengla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shivashdengla.com/blog.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css"></noscript>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></noscript>
+    
+    <!-- Calendly CSS - Load on demand -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
+
+    <style>
+        /* Navigation Bar Styles */
+        #header-navbar {
+            background: rgba(255, 0, 204, 0.5) !important;
+            background: linear-gradient(to right, rgba(51, 51, 153, 0.5), rgba(255, 0, 204, 0.5)) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+        
+        #header-navbar .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        @media (min-width: 1400px) {
+            #header-navbar .container {
+                max-width: 1300px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        #header-navbar .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem !important;
+            color: #fff !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        #header-navbar .navbar-nav .nav-link:hover {
+            color: #ff00cc !important;
+            transform: translateY(-2px);
+        }
+        
+        #header-navbar .navbar-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff !important;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 992px) {
+            #header-navbar {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            #header-navbar .navbar-nav .nav-link {
+                font-size: 1.1rem;
+                padding: 0.4rem 1.2rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            #header-navbar {
+                background: linear-gradient(to right, rgba(51, 51, 153, 0.7), rgba(255, 0, 204, 0.7)) !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            
+            #header-navbar .navbar-brand h3 {
+                font-size: 1.3rem;
+            }
+            
+            /* Hide hamburger button */
+            #header-navbar .navbar-toggler {
+                display: none !important;
+            }
+            
+            /* Hide Home, Blog, and Contact text on mobile, only show calendar icon */
+            #header-navbar .navbar-nav .nav-item:first-child,
+            #header-navbar .navbar-nav .nav-item:nth-child(2),
+            #header-navbar .navbar-nav .nav-item:last-child {
+                display: none !important;
+            }
+            
+            /* Style calendar icon */
+            #header-navbar .navbar-nav .nav-link i.fa-calendar {
+                font-size: 1.1rem;
+                padding: 5px;
+            }
+            
+            /* Show nav items directly on mobile */
+            #header-navbar .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto !important;
+                flex-grow: 1 !important;
+                align-items: center;
+            }
+            
+            #header-navbar .navbar-nav {
+                flex-direction: row;
+                width: auto;
+                margin-left: auto;
+                gap: 10px;
+            }
+            
+            #header-navbar .navbar-nav .nav-item {
+                margin: 0;
+            }
+            
+            #header-navbar .navbar-nav .nav-link {
+                padding: 8px 15px !important;
+                font-size: 0.95rem;
+                white-space: nowrap;
+            }
+        }
+        
+        .blog-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        .blog-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .blog-excerpt {
+            flex-grow: 1;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .blog-excerpt p {
+            margin-bottom: 0;
+            color: #555;
+        }
+        .read-more-btn {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white" href="/">
+                <h3 class="font-weight-bolder mb-0">SHIVANSH</h3>
+            </a>
+            <div class="navbar-collapse" id="navbar-nav-header">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link" href="contact.html" title="Contact Us">
+                            <i class="fas fa-calendar"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-single d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-2 mb-4">Blog</h1>
+            <p class="lead">Frontend development insights for funded startups, Web3 teams, and SaaS founders</p>
+        </div>
+        <a href="#blog" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="rectangle-1"></div>
+        <div class="rectangle-2"></div>
+        <div class="rectangle-transparent-1"></div>
+        <div class="rectangle-transparent-2"></div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="triangle triangle-1">
+            <img src="img/obj_triangle.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="triangle triangle-2">
+            <img src="img/obj_triangle.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="triangle triangle-3">
+            <img src="img/obj_triangle.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="triangle triangle-4">
+            <img src="img/obj_triangle.png" alt="" loading="lazy" decoding="async">
+        </div>
+    </div>
+
+    <section id="blog" class="bg-white py-5">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <!-- Blog Post 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> January 2025 | <i class="far fa-folder"></i> Conversion
+                                </div>
+                                <h3 class="h4 mb-3">Why Most Landing Pages Don't Convert (And How We Fix It)</h3>
+                                <div class="blog-excerpt">
+                                    <p>Most landing pages fail because they focus on design over conversion. Learn the 5 critical elements that separate high-converting landing pages from pretty websites that don't make money.</p>
+                                </div>
+                                <a href="blog-landing-pages-dont-convert.html" class="btn btn-sm btn-primary read-more-btn">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> January 2025 | <i class="far fa-folder"></i> Performance
+                                </div>
+                                <h3 class="h4 mb-3">Speed Optimization That Actually Impacts Revenue</h3>
+                                <div class="blog-excerpt">
+                                    <p>Every second of load time costs you conversions. Here's how we improved a SaaS landing page's conversion rate by 27% through speed optimization alone—without changing the product.</p>
+                                </div>
+                                <a href="blog-speed-optimization.html" class="btn btn-sm btn-primary read-more-btn">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <i class="fab fa-ethereum"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> January 2025 | <i class="far fa-folder"></i> Web3
+                                </div>
+                                <h3 class="h4 mb-3">Web3 Frontend Integration: Best Practices for Crypto Dashboards</h3>
+                                <div class="blog-excerpt">
+                                    <p>Building crypto dashboards and DeFi interfaces requires more than just connecting to wallets. Learn the critical UX patterns and technical considerations for Web3 frontends.</p>
+                                </div>
+                                <a href="blog-web3-frontend.html" class="btn btn-sm btn-primary read-more-btn">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> Coming Soon | <i class="far fa-folder"></i> Pricing
+                                </div>
+                                <h3 class="h4 mb-3">What $500 vs $5,000 Websites Actually Differ In</h3>
+                                <div class="blog-excerpt">
+                                    <p>It's not about code quality—it's about outcomes. High-paying clients buy solutions to business problems, not just websites. Here's what actually separates premium frontend development from cheap alternatives.</p>
+                                </div>
+                                <a href="contact.html" class="btn btn-sm btn-primary read-more-btn">Coming Soon</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> Coming Soon | <i class="far fa-folder"></i> Development
+                                </div>
+                                <h3 class="h4 mb-3">How We Shipped a Production-Ready Frontend in 10 Days</h3>
+                                <div class="blog-excerpt">
+                                    <p>Case study: How we built a complete SaaS frontend for a funded startup in 10 days without cutting corners. The process, tools, and decisions that made it possible.</p>
+                                </div>
+                                <a href="contact.html" class="btn btn-sm btn-primary read-more-btn">Coming Soon</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Blog Post 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <article class="blog-card">
+                            <div class="blog-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <i class="far fa-calendar"></i> Coming Soon | <i class="far fa-folder"></i> SaaS
+                                </div>
+                                <h3 class="h4 mb-3">SaaS Frontend Architecture: Building for Scale</h3>
+                                <div class="blog-excerpt">
+                                    <p>Funded startups need frontends that scale. Learn the architecture patterns and decisions that separate production-ready SaaS frontends from MVPs that break at 1000 users.</p>
+                                </div>
+                                <a href="contact.html" class="btn btn-sm btn-primary read-more-btn">Coming Soon</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12 text-center">
+                        <p class="lead">More articles coming soon. Want to discuss a specific topic? <a href="contact.html">Book a call</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
+        <div class="container">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="mb-2">Ready to Boost Your Conversions?</h2>
+                        <p>Book a call. Let's discuss how we can improve your conversion rates and build a frontend that converts.</p>
+                        <button class="btn btn-outline-primary btn-lg calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mastfoot my-3">
+        <div class="inner container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 d-flex align-items-center"></div>
+                <div class="col-lg-4 col-md-12 d-flex align-items-center">
+                    <p class="mx-auto text-center mb-0">&copy; 2025 All Rights Reserved by <a href="https://shivanshdengla.github.io" target="_blank">Shivansh Dengla</a>.</p>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <nav class="nav nav-mastfoot justify-content-center">
+                        <a class="nav-link" href="https://github.com/ShivanshDengla" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="nav-link" href="https://twitter.com/DenglaShivansh" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.instagram.com/shivanshdengla/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/shivansh-dengla-a5baa9179/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a class="nav-link" href="https://mail.google.com/mail/?view=cm&to=shivanshdengla@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load jQuery and Bootstrap synchronously for navbar to work -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/popper.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- Calendly JS - Load on demand -->
+    <script>
+        function loadCalendly() {
+            if (!window.Calendly) {
+                var script = document.createElement('script');
+                script.src = 'https://assets.calendly.com/assets/external/widget.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }
+        }
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendlyButtons = document.querySelectorAll('.calendly-btn');
+            calendlyButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loadCalendly();
+                    setTimeout(function() {
+                        const url = button.getAttribute('data-calendly-url') || 'https://calendly.com/shivanshdengla/30min';
+                        if (window.Calendly) {
+                    Calendly.initPopupWidget({
+                        url: url,
+                        text: 'Book a Call',
+                        color: '#ff00cc',
+                        textColor: '#ffffff',
+                        branding: true
+                    });
+                        } else {
+                            window.location.href = url;
+                        }
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
