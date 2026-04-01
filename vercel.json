@@ -1,0 +1,29 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about/", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/contact/", "destination": "/contact.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/", "destination": "/blog.html" },
+    { "source": "/blog-web3-frontend", "destination": "/blog-web3-frontend.html" },
+    { "source": "/blog-web3-frontend/", "destination": "/blog-web3-frontend.html" },
+    { "source": "/blog-speed-optimization", "destination": "/blog-speed-optimization.html" },
+    { "source": "/blog-speed-optimization/", "destination": "/blog-speed-optimization.html" },
+    { "source": "/blog-landing-pages-dont-convert", "destination": "/blog-landing-pages-dont-convert.html" },
+    { "source": "/blog-landing-pages-dont-convert/", "destination": "/blog-landing-pages-dont-convert.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/pricing/", "destination": "/pricing.html" },
+    { "source": "/pricing-web", "destination": "/pricing-web.html" },
+    { "source": "/pricing-web/", "destination": "/pricing-web.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/privacy/", "destination": "/privacy.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy.html" },
+    { "source": "/terms-and-conditions", "destination": "/terms-and-conditions.html" },
+    { "source": "/terms-and-conditions/", "destination": "/terms-and-conditions.html" },
+    { "source": "/copyright", "destination": "/copyright.html" },
+    { "source": "/copyright/", "destination": "/copyright.html" }
+  ]
+}
