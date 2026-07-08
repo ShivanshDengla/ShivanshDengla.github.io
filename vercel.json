@@ -1,5 +1,20 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/blog-web3-frontend.html", "destination": "/blog-web3-frontend", "permanent": true },
+    { "source": "/blog-speed-optimization.html", "destination": "/blog-speed-optimization", "permanent": true },
+    { "source": "/blog-landing-pages-dont-convert.html", "destination": "/blog-landing-pages-dont-convert", "permanent": true },
+    { "source": "/pricing.html", "destination": "/pricing", "permanent": true },
+    { "source": "/pricing-web.html", "destination": "/pricing-web", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms-and-conditions.html", "destination": "/terms-and-conditions", "permanent": true },
+    { "source": "/copyright.html", "destination": "/copyright", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
     { "source": "/about/", "destination": "/about.html" },
