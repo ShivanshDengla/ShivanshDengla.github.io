@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://shivashdengla.com/sitemap.xml
+Sitemap: https://www.shivanshdengla.com/sitemap.xml
 
 # Disallow admin or private areas if any
 # Disallow: /admin/
