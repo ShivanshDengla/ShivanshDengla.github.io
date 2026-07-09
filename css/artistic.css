@@ -25,7 +25,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip;
 }
 
 body {
@@ -34,7 +33,7 @@ body {
   font-family: var(--font-body);
   font-size: 17px;
   line-height: 1.65;
-  overflow-x: clip;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -585,25 +584,30 @@ main, .site-nav, .site-footer { position: relative; z-index: 2; }
   font-size: clamp(1rem, 1.4vw, 1.15rem);
 }
 
-/* Scroll reveal states */
-.reveal {
+/* Scroll reveal states — visible by default; hidden only when JS is active */
+.reveal,
+.reveal-scale {
+  opacity: 1;
+  transform: none;
+}
+
+.js .reveal {
   opacity: 0;
   transform: translateY(48px);
   transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
   transition-delay: var(--d, 0s);
-  will-change: opacity, transform;
 }
 
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-.reveal-scale {
+.js .reveal-scale {
   opacity: 0;
   transform: scale(0.92) translateY(30px);
   transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
   transition-delay: var(--d, 0s);
 }
 
-.reveal-scale.is-visible { opacity: 1; transform: scale(1) translateY(0); }
+.js .reveal-scale.is-visible { opacity: 1; transform: scale(1) translateY(0); }
 
 /* ------------------------------------------------------------
    Work / project gallery
@@ -1478,6 +1482,13 @@ main, .site-nav, .site-footer { position: relative; z-index: 2; }
   .contact-wrap { grid-template-columns: 1fr; }
   .contact-aside { order: -1; }
   .hero-meta .hero-loc { display: none; }
+  /* Always show scroll-reveal content on mobile — avoids blank sections if IO fails */
+  .js .reveal,
+  .js .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 640px) {

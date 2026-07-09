@@ -2,8 +2,15 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var isMobile = window.matchMedia("(max-width: 820px)").matches;
+
+  function safeInit(fn) {
+    try { fn(); } catch (e) { console.warn("artistic.js:", e); }
+  }
 
   /* ----------------------------------------------------------
      Aurora canvas: drifting gradient blobs + particle network
@@ -194,10 +201,27 @@
      ---------------------------------------------------------- */
   function initReveals() {
     var els = document.querySelectorAll(".reveal, .reveal-scale");
-    if (!("IntersectionObserver" in window) || reduceMotion) {
+    if (!els.length) return;
+
+    function showAll() {
       els.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    if (!("IntersectionObserver" in window) || reduceMotion || isMobile) {
+      showAll();
       return;
     }
+
+    function markInView(el) {
+      var rect = el.getBoundingClientRect();
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < vh - 8 && rect.bottom > 8) {
+        el.classList.add("is-visible");
+        return true;
+      }
+      return false;
+    }
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -205,8 +229,11 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    els.forEach(function (el) { io.observe(el); });
+    }, { threshold: 0.05, rootMargin: "0px 0px 80px 0px" });
+
+    els.forEach(function (el) {
+      if (!markInView(el)) io.observe(el);
+    });
   }
 
   /* ----------------------------------------------------------
@@ -386,14 +413,14 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    initHeroWords();
-    initAurora();
-    initCursor();
-    initScrollUI();
-    initReveals();
-    initTilt();
-    initCounters();
-    initMagnetic();
-    initWorkKindContrast();
+    safeInit(initHeroWords);
+    safeInit(initAurora);
+    safeInit(initCursor);
+    safeInit(initScrollUI);
+    safeInit(initReveals);
+    safeInit(initTilt);
+    safeInit(initCounters);
+    safeInit(initMagnetic);
+    safeInit(initWorkKindContrast);
   });
 })();
