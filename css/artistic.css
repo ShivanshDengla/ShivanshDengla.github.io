@@ -1356,6 +1356,111 @@ main, .site-nav, .site-footer { position: relative; z-index: 2; }
 .nav-links a.is-active::after { transform: scaleX(1); transform-origin: left; }
 
 /* ------------------------------------------------------------
+   Blog post (article) pages
+   ------------------------------------------------------------ */
+.blog-post-hero {
+  padding: 140px clamp(20px, 6vw, 80px) 48px;
+  position: relative;
+}
+
+.blog-post-hero .section-inner { max-width: 820px; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+  margin-bottom: 28px;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.back-link:hover { color: var(--magenta); gap: 14px; }
+
+.post-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.post-meta i { color: var(--magenta); margin-right: 6px; }
+
+.post-meta .post-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  letter-spacing: 0.12em;
+}
+
+.article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 6vw, 80px) 80px;
+}
+
+.article-body p {
+  color: var(--ink-dim);
+  margin-bottom: 1.35em;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  margin: 2.4em 0 0.8em;
+  color: var(--ink);
+}
+
+.article-body h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 1.8em 0 0.6em;
+  color: var(--ink);
+}
+
+.article-body strong { color: var(--ink); font-weight: 600; }
+
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1.5em 1.2em;
+  color: var(--ink-dim);
+  line-height: 1.75;
+}
+
+.article-body li { margin-bottom: 0.55em; }
+
+.article-body li strong { color: var(--ink); }
+
+.article-cta {
+  margin-top: 2.5em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ------------------------------------------------------------
    Responsive
    ------------------------------------------------------------ */
 @media (max-width: 1024px) {
