@@ -12,6 +12,7 @@
     { "source": "/pricing-web.html", "destination": "/pricing-web", "permanent": true },
     { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/meditation-privacy.html", "destination": "/meditation/privacy", "permanent": true },
     { "source": "/terms-and-conditions.html", "destination": "/terms-and-conditions", "permanent": true },
     { "source": "/copyright.html", "destination": "/copyright", "permanent": true }
   ],
@@ -36,6 +37,8 @@
     { "source": "/privacy/", "destination": "/privacy.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/privacy-policy/", "destination": "/privacy-policy.html" },
+    { "source": "/meditation/privacy", "destination": "/meditation-privacy.html" },
+    { "source": "/meditation/privacy/", "destination": "/meditation-privacy.html" },
     { "source": "/terms-and-conditions", "destination": "/terms-and-conditions.html" },
     { "source": "/terms-and-conditions/", "destination": "/terms-and-conditions.html" },
     { "source": "/copyright", "destination": "/copyright.html" },
