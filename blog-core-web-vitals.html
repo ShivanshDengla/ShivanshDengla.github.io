@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Why Most Landing Pages Don't Convert | Shivansh Dengla</title>
-    <meta name="description" content="Most landing pages fail because they focus on design over conversion. Learn the 5 critical elements that separate high-converting pages from pretty sites that don't convert.">
+    <title>Core Web Vitals That Actually Convert | Shivansh Dengla</title>
+    <meta name="description" content="LCP, INP, and CLS explained like conversion features, not lab scores. How Core Web Vitals affect SaaS landing pages and what to fix first.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
-    <link rel="canonical" href="https://www.shivanshdengla.com/blog-landing-pages-dont-convert">
+    <meta name="keywords" content="Core Web Vitals, LCP, INP, CLS, landing page performance, conversion rate, frontend developer">
+    <link rel="canonical" href="https://www.shivanshdengla.com/blog-core-web-vitals">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,42 +52,41 @@
             <a class="blog-back" href="blog.html">&larr; Back to Blog</a>
             <header class="blog-post-header">
                 <div class="blog-post-meta">
-                    <span>January 2025</span>
-                    <span class="blog-row-tag">Conversion</span>
+                    <span>July 2026</span>
+                    <span class="blog-row-tag">Performance</span>
                 </div>
-                <h1>Why Most Landing Pages Don&rsquo;t Convert (And How We Fix It)</h1>
+                <h1>Core Web Vitals Aren&rsquo;t a Report Card. They&rsquo;re a Conversion Feature.</h1>
             </header>
 
             <div class="article-body">
-                <p>You&rsquo;re running ads. You&rsquo;re getting traffic. But your landing page isn&rsquo;t converting. Sound familiar?</p>
-                <p>After building frontends for funded startups and Web3 teams, I&rsquo;ve seen the same mistakes over and over. Most landing pages fail because they prioritize design aesthetics over conversion psychology.</p>
+                <p>Somewhere in a Slack channel, a founder is staring at a green Lighthouse score like it is a participation trophy. Nice. Meanwhile the landing page still feels like it woke up slowly and asked for coffee before accepting the first click.</p>
+                <p>Core Web Vitals matter because humans matter. Google&rsquo;s <strong>LCP</strong>, <strong>INP</strong>, and <strong>CLS</strong> are just names for three very human questions: Did it appear? Did it respond? Did it jump around like a startled cat?</p>
 
-                <h2>The 5 Critical Elements That Separate High-Converting Landing Pages</h2>
+                <h2>What each vital is secretly asking</h2>
 
-                <h3>1. Clear Value Proposition Above the Fold</h3>
-                <p>Your visitor should understand what you do and why they should care within 3 seconds. Not &ldquo;We&rsquo;re a cutting-edge SaaS platform.&rdquo; Instead: &ldquo;Turn more visitors into customers with a conversion-focused frontend.&rdquo;</p>
-                <p>Action: Write your headline as if you&rsquo;re explaining to a friend what problem you solve, not what you built.</p>
+                <h3>LCP: &ldquo;Show me the thing I came for&rdquo;</h3>
+                <p><strong>Largest Contentful Paint</strong> is usually your hero headline, product shot, or big card. If that takes forever, people bounce before your value prop gets a hearing. On SaaS and Web3 marketing pages, LCP problems are often image weight, late fonts, or a giant JS bundle escorting a single paragraph onto the screen.</p>
+                <p>Fix first: compress and size the hero media, preload the critical font, and stop making the headline wait on a chat widget.</p>
 
-                <h3>2. Social Proof That Builds Trust</h3>
-                <p>Testimonials are good. Specific results are better. Instead of &ldquo;Great developer!&rdquo; use &ldquo;Increased our conversion rate in 10 days.&rdquo;</p>
-                <p>For funded startups and Web3 teams, showing you&rsquo;ve worked with similar companies matters. Display logos or names of clients in your space.</p>
+                <h3>INP: &ldquo;Stop ignoring my thumb&rdquo;</h3>
+                <p><strong>Interaction to Next Paint</strong> replaced FID for a reason. Real users click menus, tabs, and CTAs while your main thread is still sorting out seventeen analytics scripts and a Carousel Of Ambition.</p>
+                <p>Fix first: defer non-critical JS, split heavy client components, and keep the primary CTA path embarrassingly light.</p>
 
-                <h3>3. Single, Clear Call-to-Action</h3>
-                <p>One CTA per page. Not &ldquo;Book a call&rdquo; and &ldquo;Download PDF&rdquo; and &ldquo;Sign up&rdquo; all competing for attention. Pick the action that moves prospects closest to becoming customers.</p>
+                <h3>CLS: &ldquo;Do not move the button I was about to press&rdquo;</h3>
+                <p><strong>Cumulative Layout Shift</strong> is the silent conversion thief. Banner loads, font swaps, late images: the book now button becomes the footer. Magical if you enjoy rage. Terrible if you enjoy money.</p>
+                <p>Fix first: reserve space with width/height or aspect-ratio, use font-display with care, and never inject late UI above the fold without a reservation.</p>
 
-                <h3>4. Speed That Doesn&rsquo;t Kill Conversions</h3>
-                <p>Every second of load time costs you conversions. Google found that 53% of mobile users abandon sites that take longer than 3 seconds to load.</p>
-                <p>Speed is also about perceived speed. Optimize images, lazy load below-the-fold content, and prioritize critical CSS.</p>
+                <h2>A practical triage for busy founders</h2>
+                <ol>
+                    <li>Measure on a real mid-range phone, not only your MacBook in airplane mode optimism.</li>
+                    <li>Open Search Console field data if you have it. Lab scores flatter. Field data tattles.</li>
+                    <li>Fix LCP and CLS on the landing page first. That is where ad spend lands.</li>
+                    <li>Then trim main-thread work around the primary interaction: connect wallet, book call, start trial.</li>
+                </ol>
 
-                <h3>5. Mobile-First Design That Actually Works</h3>
-                <p>Most landing pages are &ldquo;mobile-responsive&rdquo; but not &ldquo;mobile-optimized.&rdquo; On mobile, your CTA should be thumb-friendly, text should be scannable, and forms should be minimal.</p>
-                <p>Test on actual devices, not just browser dev tools.</p>
-
-                <h2>What We Do Differently</h2>
-                <p>When I build landing pages for funded startups and Web3 teams, I start with conversion goals, not design mockups. Every element is tested against one question: &ldquo;Does this help the visitor take the next step?&rdquo;</p>
-
-                <h2>Ready to Fix Your Landing Page?</h2>
-                <p>If your ads are working but your landing page isn&rsquo;t converting, let&rsquo;s talk.</p>
+                <h2>What I build for</h2>
+                <p>When I ship frontends for startups and product teams, I treat Core Web Vitals as product requirements, not SEO seasoning. Pretty pages that stutter lose trust in the same breath they ask for it.</p>
+                <p>If your ads are healthy and your page feels sluggish, that gap is usually cheaper to close than another creative test.</p>
 
                 <div class="article-cta">
                     <button class="btn btn-primary calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">

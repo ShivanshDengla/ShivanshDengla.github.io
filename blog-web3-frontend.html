@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Web3 Frontend Integration: Best Practices for Crypto Dashboards | Frontend Development Blog</title>
-    <meta name="description" content="Building crypto dashboards and DeFi interfaces requires more than just connecting to wallets. Learn the critical UX patterns and technical considerations for Web3 frontends.">
+    <title>Web3 Frontend Integration Patterns | Shivansh Dengla</title>
+    <meta name="description" content="Wallet flows, loading states, and dashboard UX that keep crypto products feeling as clear as any Web2 app.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
     <link rel="canonical" href="https://www.shivanshdengla.com/blog-web3-frontend">
@@ -12,127 +12,104 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></noscript>
-
-    <link rel="stylesheet" href="css/artistic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
 </head>
 <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <canvas id="aurora-canvas" aria-hidden="true"></canvas>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-halo" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <nav class="site-nav">
-        <a class="nav-brand" href="index.html">SHIVANSH<span class="brand-dot">.</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="index.html#craft">Craft</a></li>
-            <li><a href="blog.html" class="is-active">Blog</a></li>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-brand" href="index.html">Shivansh Dengla</a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-sm calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
+                    <span class="btn-label">Let&rsquo;s Talk</span>
+                    <span class="btn-label btn-label-hover" aria-hidden="true">Let&rsquo;s Talk</span>
+                </button>
+                <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li><button class="nav-cta calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button></li>
         </ul>
     </nav>
 
     <main>
-        <header class="blog-post-hero">
-            <div class="hero-orb orb-1" aria-hidden="true"></div>
-            <div class="section-inner">
-                <a href="blog.html" class="back-link reveal"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-                <h1 class="post-title reveal" style="--d:0.08s">Web3 Frontend Integration: Best Practices for Crypto Dashboards</h1>
-                <div class="post-meta reveal" style="--d:0.16s">
-                    <span><i class="far fa-calendar"></i> January 2025</span>
-                    <span class="post-tag">Web3</span>
+        <article class="blog-post">
+            <a class="blog-back" href="blog.html">&larr; Back to Blog</a>
+            <header class="blog-post-header">
+                <div class="blog-post-meta">
+                    <span>January 2025</span>
+                    <span class="blog-row-tag">Web3</span>
                 </div>
-            </div>
-        </header>
+                <h1>Web3 Frontend Integration: Best Practices for Crypto Dashboards</h1>
+            </header>
 
-        <article class="article-body reveal">
-            <p>Building crypto dashboards and DeFi interfaces is different from building traditional web apps. It&rsquo;s not just about connecting to MetaMask&mdash;it&rsquo;s about creating UX patterns that make complex blockchain interactions feel simple.</p>
+            <div class="article-body">
+                <p>Building crypto dashboards and DeFi interfaces is different from building traditional web apps. It is not just about connecting to a wallet. It is about UX patterns that make complex chain interactions feel simple.</p>
+                <p>After shipping Web3 interfaces for teams like PoolTogether, I have learned that frontend work here is as much about communication as it is about RPC calls.</p>
 
-            <p>After building frontends for Web3 teams like PoolTogether, I&rsquo;ve learned that Web3 frontend development requires a unique approach to UX, error handling, and state management.</p>
+                <h2>The Unique Challenges of Web3 Frontends</h2>
 
-            <h2>The Unique Challenges of Web3 Frontends</h2>
+                <h3>1. Wallet Connection UX</h3>
+                <p>Most apps fail at the first step. Users do not always understand why they need to connect or what happens when they do.</p>
+                <p><strong>Best practice:</strong> Explain connection in plain language. Use CTAs like &ldquo;Connect wallet to view your balance&rdquo; instead of a bare &ldquo;Connect wallet.&rdquo;</p>
 
-            <h3>1. Wallet Connection UX</h3>
-            <p>Most Web3 apps fail at the first step: wallet connection. Users don&rsquo;t understand why they need to &ldquo;connect&rdquo; their wallet, or what happens when they do.</p>
-            <p><strong>Best Practice:</strong> Explain what wallet connection means in plain language. Show users what they&rsquo;re connecting to and why. Use clear CTAs like &ldquo;Connect Wallet to View Your Balance&rdquo; instead of just &ldquo;Connect Wallet.&rdquo;</p>
+                <h3>2. Transaction State Management</h3>
+                <p>Chain transactions take time. Users need clear feedback for pending, confirmed, and failed states.</p>
+                <p><strong>Best practice:</strong> Use toasts or inline status, surface hashes with explorer links, and never leave the UI silent.</p>
 
-            <h3>2. Transaction State Management</h3>
-            <p>Blockchain transactions take time. Users need to know:</p>
-            <ul>
-                <li>Transaction is pending</li>
-                <li>Transaction is confirmed</li>
-                <li>Transaction failed (and why)</li>
-            </ul>
-            <p><strong>Best Practice:</strong> Use toast notifications or inline status indicators. Show transaction hashes with links to block explorers. Never leave users wondering if their transaction went through.</p>
+                <h3>3. Error Handling</h3>
+                <p>Raw chain errors are cryptic. &ldquo;Reverted&rdquo; does not help anyone.</p>
+                <p><strong>Best practice:</strong> Translate into human language. &ldquo;Insufficient funds&rdquo; beats &ldquo;execution reverted.&rdquo;</p>
 
-            <h3>3. Error Handling</h3>
-            <p>Web3 errors are cryptic. &ldquo;Reverted&rdquo; or &ldquo;User rejected&rdquo; don&rsquo;t help users understand what went wrong.</p>
-            <p><strong>Best Practice:</strong> Translate blockchain errors into user-friendly messages. &ldquo;Insufficient funds&rdquo; instead of &ldquo;execution reverted.&rdquo; &ldquo;Transaction cancelled&rdquo; instead of &ldquo;user rejected request.&rdquo;</p>
+                <h3>4. Network Switching</h3>
+                <p>Users often land on the wrong network. Detect mismatches early and offer a one-click switch when possible.</p>
 
-            <h3>4. Network Switching</h3>
-            <p>Users often connect on the wrong network. Your app should detect this and guide them to switch.</p>
-            <p><strong>Best Practice:</strong> Detect network mismatches immediately. Show a clear message: &ldquo;Please switch to Ethereum Mainnet to continue.&rdquo; Provide a one-click network switch button.</p>
+                <h2>Technical Considerations</h2>
+                <p>Prefer mature libraries such as ethers.js and hooks layers like wagmi. Treat wallet status, network, balances, and tx history as first-class state. Blockchain calls are slow: use loading states, optimistic UI where safe, and caching where you can.</p>
 
-            <h2>Technical Considerations</h2>
+                <h2>Real-World Example: PoolTogether</h2>
+                <p>On PoolTogether we pushed for clarity:</p>
+                <ul>
+                    <li>Clear hierarchy for deposits and potential wins</li>
+                    <li>Live balances without full page refresh</li>
+                    <li>Transaction status at each step</li>
+                    <li>Mobile layouts people could check on the go</li>
+                </ul>
 
-            <h3>Wallet Provider Libraries</h3>
-            <p>Use established libraries like ethers.js or web3.js. For React apps, consider wagmi or useDapp for better hooks-based state management.</p>
+                <h2>The Bottom Line</h2>
+                <p>Web3 frontend work is about making chain interactions accessible. If you are building a product that needs that kind of UI, let&rsquo;s talk.</p>
 
-            <h3>State Management</h3>
-            <p>Web3 state is complex: wallet connection status, network, account balance, transaction history. Use a state management solution (Redux, Zustand, or Context API) to keep this organized.</p>
-
-            <h3>Performance</h3>
-            <p>Blockchain calls are slow. Don&rsquo;t block your UI waiting for RPC calls. Use loading states, optimistic updates, and cache results when possible.</p>
-
-            <h2>Real-World Example: PoolTogether Dashboard</h2>
-            <p>When building the PoolTogether frontend, we focused on making complex DeFi interactions feel simple:</p>
-            <ul>
-                <li>Clear visual hierarchy showing deposit amounts and potential winnings</li>
-                <li>Real-time balance updates without page refreshes</li>
-                <li>Transaction status clearly displayed at each step</li>
-                <li>Mobile-optimized for users checking balances on the go</li>
-            </ul>
-
-            <h2>The Bottom Line</h2>
-            <p>Web3 frontend development isn&rsquo;t just about technical integration&mdash;it&rsquo;s about creating UX patterns that make blockchain interactions accessible to non-technical users.</p>
-            <p>If you&rsquo;re building a Web3 product and need a frontend that actually converts users, let&rsquo;s talk.</p>
-
-            <div class="article-cta">
-                <button class="btn-aurora calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min"><i class="fas fa-calendar-alt"></i> Book a Call</button>
+                <div class="article-cta">
+                    <button class="btn btn-primary calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
+                        <span class="btn-label">Book a Call</span>
+                        <span class="btn-label btn-label-hover" aria-hidden="true">Book a Call</span>
+                    </button>
+                </div>
             </div>
         </article>
-
-        <section class="section mega-cta">
-            <div class="section-inner">
-                <h2 class="giant reveal">Ready to <span class="stroke">boost</span><br>your conversions?</h2>
-                <p class="reveal" style="--d:0.12s">Book a call. Let&rsquo;s discuss how we can improve your conversion rates and build a frontend that converts.</p>
-                <div class="reveal" style="--d:0.22s">
-                    <button class="btn-aurora calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min"><i class="fas fa-calendar-alt"></i> Book a Call</button>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
-        <span class="foot-brand">SHIVANSH<span style="color:var(--magenta)">.</span></span>
-        <span class="foot-copy">&copy; 2025 All Rights Reserved by <a href="https://www.shivanshdengla.com" style="color:var(--ink-dim)">Shivansh Dengla</a></span>
-        <nav class="foot-social" aria-label="Social links">
-            <a href="https://github.com/ShivanshDengla" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/DenglaShivansh" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/shivanshdengla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/shivansh-dengla-a5baa9179/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://mail.google.com/mail/?view=cm&to=shivanshdengla@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="far fa-envelope"></i></a>
-        </nav>
+        <span>&copy; 2026 Shivansh Dengla</span>
+        <a href="blog.html">All posts</a>
     </footer>
 
-    <script defer src="js/artistic.js"></script>
+    <script defer src="js/portfolio.js"></script>
     <script>
         function loadCalendly() {
             if (!window.Calendly) {
@@ -150,7 +127,7 @@
                     setTimeout(function() {
                         var url = btn.getAttribute('data-calendly-url') || 'https://calendly.com/shivanshdengla/30min';
                         if (window.Calendly) {
-                            Calendly.initPopupWidget({ url: url, color: '#ff2ec4', textColor: '#ffffff', branding: true });
+                            Calendly.initPopupWidget({ url: url, color: '#0d7377', textColor: '#ffffff', branding: true });
                         } else { window.location.href = url; }
                     }, 100);
                 });

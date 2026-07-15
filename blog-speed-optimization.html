@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Speed Optimization That Actually Impacts Revenue | Frontend Development Blog</title>
-    <meta name="description" content="Every second of load time costs you conversions. Learn how we improved a SaaS landing page's conversion rate by 27% through speed optimization alone.">
+    <title>Speed Optimization That Impacts Revenue | Shivansh Dengla</title>
+    <meta name="description" content="Every second of load time costs conversions. How speed work on a SaaS landing page lifted results without a full redesign.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
     <link rel="canonical" href="https://www.shivanshdengla.com/blog-speed-optimization">
@@ -12,121 +12,110 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></noscript>
-
-    <link rel="stylesheet" href="css/artistic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
 </head>
 <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <canvas id="aurora-canvas" aria-hidden="true"></canvas>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-halo" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <nav class="site-nav">
-        <a class="nav-brand" href="index.html">SHIVANSH<span class="brand-dot">.</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="index.html#craft">Craft</a></li>
-            <li><a href="blog.html" class="is-active">Blog</a></li>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-brand" href="index.html">Shivansh Dengla</a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-sm calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
+                    <span class="btn-label">Let&rsquo;s Talk</span>
+                    <span class="btn-label btn-label-hover" aria-hidden="true">Let&rsquo;s Talk</span>
+                </button>
+                <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li><button class="nav-cta calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button></li>
         </ul>
     </nav>
 
     <main>
-        <header class="blog-post-hero">
-            <div class="hero-orb orb-1" aria-hidden="true"></div>
-            <div class="section-inner">
-                <a href="blog.html" class="back-link reveal"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-                <h1 class="post-title reveal" style="--d:0.08s">Speed Optimization That Actually Impacts Revenue</h1>
-                <div class="post-meta reveal" style="--d:0.16s">
-                    <span><i class="far fa-calendar"></i> January 2025</span>
-                    <span class="post-tag">Performance</span>
+        <article class="blog-post">
+            <a class="blog-back" href="blog.html">&larr; Back to Blog</a>
+            <header class="blog-post-header">
+                <div class="blog-post-meta">
+                    <span>January 2025</span>
+                    <span class="blog-row-tag">Performance</span>
                 </div>
-            </div>
-        </header>
+                <h1>Speed Optimization That Actually Impacts Revenue</h1>
+            </header>
 
-        <article class="article-body reveal">
-            <p>Here&rsquo;s a fact that should keep you up at night: Every second of load time costs you conversions. Google found that 53% of mobile users abandon sites that take longer than 3 seconds to load.</p>
+            <div class="article-body">
+                <p>Every second of load time costs you conversions. Google found that 53% of mobile users abandon sites that take longer than 3 seconds to load.</p>
+                <p>But most teams miss this: speed work is not only about shaving milliseconds. It is about knowing which changes actually move revenue.</p>
 
-            <p>But here&rsquo;s what most developers miss: Speed optimization isn&rsquo;t just about shaving milliseconds off load times. It&rsquo;s about understanding which optimizations actually move the needle on revenue.</p>
+                <h2>A Case Study in Perceived Speed</h2>
+                <p>I worked with a SaaS startup running Facebook ads to a landing page. The ads were working. The page was not converting.</p>
+                <p>The page loaded in about 4.2 seconds on mobile. More importantly, the <strong>perceived</strong> load time felt worse because critical content was not prioritized.</p>
 
-            <h2>The Case Study: 27% Conversion Lift Through Speed Alone</h2>
-            <p>I recently worked with a SaaS startup that was running Facebook ads to a landing page. The ads were working&mdash;they were getting quality traffic. But the landing page wasn&rsquo;t converting.</p>
-            <p>After analyzing the page, I found it was loading in 4.2 seconds on mobile. Not terrible, but not great. More importantly, the <strong>perceived</strong> load time was even worse because critical content wasn&rsquo;t prioritized.</p>
+                <h3>What We Fixed</h3>
+                <ul>
+                    <li><strong>Critical CSS inlining:</strong> Above-the-fold styles inline to cut render blocking</li>
+                    <li><strong>Image optimization:</strong> WebP where possible, lazy load below the fold</li>
+                    <li><strong>JavaScript deferring:</strong> Non-critical scripts deferred, Calendly loaded on intent</li>
+                    <li><strong>Font optimization:</strong> Preload key fonts with font-display: swap</li>
+                    <li><strong>CDN:</strong> Static assets closer to users</li>
+                </ul>
+                <p>Load time dropped under 2 seconds. Conversion improved without a redesign of the product story.</p>
 
-            <h3>What We Fixed</h3>
-            <ul>
-                <li><strong>Critical CSS Inlining:</strong> Moved above-the-fold CSS inline to eliminate render-blocking resources</li>
-                <li><strong>Image Optimization:</strong> Converted hero images to WebP, added lazy loading for below-the-fold content</li>
-                <li><strong>JavaScript Deferring:</strong> Deferred non-critical scripts, loaded Calendly widget on interaction</li>
-                <li><strong>Font Optimization:</strong> Preloaded critical fonts, used font-display: swap to prevent invisible text</li>
-                <li><strong>CDN Implementation:</strong> Served static assets through a CDN to reduce latency</li>
-            </ul>
+                <h2>Why Speed Matters More Than You Think</h2>
+                <p>Amazon famously found that small latency hits sales. For a startup spending hard on ads, a one-second delay is not a technical debt item. It is wasted spend.</p>
 
-            <p>The result? Load time dropped to 1.8 seconds. But more importantly, conversion rate increased by 27%.</p>
+                <h3>The Psychology of Speed</h3>
+                <p>Users form an opinion about speed almost immediately. That is why:</p>
+                <ul>
+                    <li>Above-the-fold content should render first</li>
+                    <li>Progressive loading creates a sense of responsiveness</li>
+                    <li>Skeleton UI beats an empty white page</li>
+                </ul>
 
-            <h2>Why Speed Matters More Than You Think</h2>
-            <p>Amazon found that every 100ms of latency costs them 1% in sales. For a funded startup running $10K/month in ads, a 1-second delay could be costing you $1,000+ in lost conversions.</p>
+                <h2>A Practical Checklist</h2>
+                <ol>
+                    <li><strong>Measure first:</strong> Lighthouse, PageSpeed Insights, WebPageTest</li>
+                    <li><strong>Images:</strong> Modern formats, lazy loading, responsive sources</li>
+                    <li><strong>JavaScript:</strong> Cut unused code, defer non-critical work</li>
+                    <li><strong>CSS:</strong> Inline critical styles, defer the rest</li>
+                    <li><strong>CDN + caching:</strong> Edge delivery and sane cache headers</li>
+                    <li><strong>Fonts:</strong> Preload, swap, subset when useful</li>
+                </ol>
 
-            <h3>The Psychology of Speed</h3>
-            <p>It&rsquo;s not just about actual load time&mdash;it&rsquo;s about perceived speed. Users form an opinion about your site&rsquo;s speed within 50 milliseconds. That&rsquo;s why:</p>
-            <ul>
-                <li>Above-the-fold content should render immediately</li>
-                <li>Progressive loading creates the illusion of speed</li>
-                <li>Skeleton screens are better than blank pages</li>
-            </ul>
+                <h2>The Bottom Line</h2>
+                <p>If you are running ads into a slow page, you are paying for abandonments. Fixing speed is often cheaper than buying more traffic.</p>
 
-            <h2>Speed Optimization Checklist for Funded Startups</h2>
-            <ol>
-                <li><strong>Measure First:</strong> Use Lighthouse, PageSpeed Insights, and WebPageTest to establish baseline</li>
-                <li><strong>Optimize Images:</strong> Use WebP format, implement lazy loading, serve responsive images</li>
-                <li><strong>Minimize JavaScript:</strong> Remove unused code, defer non-critical scripts, use code splitting</li>
-                <li><strong>Optimize CSS:</strong> Inline critical CSS, defer non-critical styles, remove unused CSS</li>
-                <li><strong>Use a CDN:</strong> Serve static assets from edge locations closer to users</li>
-                <li><strong>Enable Caching:</strong> Set proper cache headers for static assets</li>
-                <li><strong>Optimize Fonts:</strong> Preload critical fonts, use font-display: swap, subset fonts</li>
-            </ol>
-
-            <h2>The Bottom Line</h2>
-            <p>Speed optimization isn&rsquo;t a &ldquo;nice to have&rdquo; for funded startups running paid ads. It&rsquo;s a revenue driver. Every second you shave off load time directly impacts your conversion rate and ROI on ad spend.</p>
-            <p>If your landing page is slow and you&rsquo;re running ads, you&rsquo;re literally burning money. Let&rsquo;s fix that.</p>
-
-            <div class="article-cta">
-                <button class="btn-aurora calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min"><i class="fas fa-calendar-alt"></i> Book a Call</button>
+                <div class="article-cta">
+                    <button class="btn btn-primary calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
+                        <span class="btn-label">Book a Call</span>
+                        <span class="btn-label btn-label-hover" aria-hidden="true">Book a Call</span>
+                    </button>
+                </div>
             </div>
         </article>
-
-        <section class="section mega-cta">
-            <div class="section-inner">
-                <h2 class="giant reveal">Ready to <span class="stroke">boost</span><br>your conversions?</h2>
-                <p class="reveal" style="--d:0.12s">Book a call. Let&rsquo;s discuss how we can improve your conversion rates and build a frontend that converts.</p>
-                <div class="reveal" style="--d:0.22s">
-                    <button class="btn-aurora calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min"><i class="fas fa-calendar-alt"></i> Book a Call</button>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
-        <span class="foot-brand">SHIVANSH<span style="color:var(--magenta)">.</span></span>
-        <span class="foot-copy">&copy; 2025 All Rights Reserved by <a href="https://www.shivanshdengla.com" style="color:var(--ink-dim)">Shivansh Dengla</a></span>
-        <nav class="foot-social" aria-label="Social links">
-            <a href="https://github.com/ShivanshDengla" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/DenglaShivansh" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/shivanshdengla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/shivansh-dengla-a5baa9179/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://mail.google.com/mail/?view=cm&to=shivanshdengla@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="far fa-envelope"></i></a>
-        </nav>
+        <span>&copy; 2026 Shivansh Dengla</span>
+        <a href="blog.html">All posts</a>
     </footer>
 
-    <script defer src="js/artistic.js"></script>
+    <script defer src="js/portfolio.js"></script>
     <script>
         function loadCalendly() {
             if (!window.Calendly) {
@@ -144,7 +133,7 @@
                     setTimeout(function() {
                         var url = btn.getAttribute('data-calendly-url') || 'https://calendly.com/shivanshdengla/30min';
                         if (window.Calendly) {
-                            Calendly.initPopupWidget({ url: url, color: '#ff2ec4', textColor: '#ffffff', branding: true });
+                            Calendly.initPopupWidget({ url: url, color: '#0d7377', textColor: '#ffffff', branding: true });
                         } else { window.location.href = url; }
                     }, 100);
                 });

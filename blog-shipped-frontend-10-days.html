@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Why Most Landing Pages Don't Convert | Shivansh Dengla</title>
-    <meta name="description" content="Most landing pages fail because they focus on design over conversion. Learn the 5 critical elements that separate high-converting pages from pretty sites that don't convert.">
+    <title>How We Shipped a Production Frontend in 10 Days | Shivansh Dengla</title>
+    <meta name="description" content="A practical process for shipping a production SaaS or marketing frontend in 10 days: scoping, conversion priorities, performance gates, and what to cut.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
-    <link rel="canonical" href="https://www.shivanshdengla.com/blog-landing-pages-dont-convert">
+    <meta name="keywords" content="ship frontend fast, SaaS MVP frontend, landing page sprint, production ready UI">
+    <link rel="canonical" href="https://www.shivanshdengla.com/blog-shipped-frontend-10-days">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,42 +52,49 @@
             <a class="blog-back" href="blog.html">&larr; Back to Blog</a>
             <header class="blog-post-header">
                 <div class="blog-post-meta">
-                    <span>January 2025</span>
-                    <span class="blog-row-tag">Conversion</span>
+                    <span>July 2026</span>
+                    <span class="blog-row-tag">Process</span>
                 </div>
-                <h1>Why Most Landing Pages Don&rsquo;t Convert (And How We Fix It)</h1>
+                <h1>How We Shipped a Production Frontend in 10 Days</h1>
             </header>
 
             <div class="article-body">
-                <p>You&rsquo;re running ads. You&rsquo;re getting traffic. But your landing page isn&rsquo;t converting. Sound familiar?</p>
-                <p>After building frontends for funded startups and Web3 teams, I&rsquo;ve seen the same mistakes over and over. Most landing pages fail because they prioritize design aesthetics over conversion psychology.</p>
+                <p>Ten days is enough time to ship something real. It is also enough time to invent a design system named after a constellation and still miss launch. The difference is almost always ruthless sequencing.</p>
+                <p>Here is the process I use when a founder needs a marketing site or product shell live before the ads, the investors, or the coffee wears off.</p>
 
-                <h2>The 5 Critical Elements That Separate High-Converting Landing Pages</h2>
+                <h2>Day 1 to 2: Decide the single job</h2>
+                <p>Not fifteen goals. One. Book a call. Start trial. Connect wallet. Deposit into vault. Everything else is a cameo.</p>
+                <p>We write the offer sentence before we open Figma. If we cannot say it without marketing fog, the page will not say it either.</p>
 
-                <h3>1. Clear Value Proposition Above the Fold</h3>
-                <p>Your visitor should understand what you do and why they should care within 3 seconds. Not &ldquo;We&rsquo;re a cutting-edge SaaS platform.&rdquo; Instead: &ldquo;Turn more visitors into customers with a conversion-focused frontend.&rdquo;</p>
-                <p>Action: Write your headline as if you&rsquo;re explaining to a friend what problem you solve, not what you built.</p>
+                <h2>Day 3 to 5: Build the conversion spine</h2>
+                <ul>
+                    <li>Hero with value and CTA</li>
+                    <li>Proof that matches the buyer</li>
+                    <li>How it works in human English</li>
+                    <li>FAQ that steals from sales call objections</li>
+                    <li>Footer that does not look abandoned</li>
+                </ul>
+                <p>No decorative archaeology. No infinite carousel of features that all mean &ldquo;we also exist.&rdquo;</p>
 
-                <h3>2. Social Proof That Builds Trust</h3>
-                <p>Testimonials are good. Specific results are better. Instead of &ldquo;Great developer!&rdquo; use &ldquo;Increased our conversion rate in 10 days.&rdquo;</p>
-                <p>For funded startups and Web3 teams, showing you&rsquo;ve worked with similar companies matters. Display logos or names of clients in your space.</p>
+                <h2>Day 6 to 8: Make it feel premium under stress</h2>
+                <p>This is where cheap builds usually stop and good builds begin:</p>
+                <ul>
+                    <li>Image and font budget</li>
+                    <li>Mobile thumb paths</li>
+                    <li>Form or booking flow that fails gracefully</li>
+                    <li>Core Web Vitals sanity check on a mid-range phone</li>
+                    <li>Analytics without turning the page into molasses</li>
+                </ul>
 
-                <h3>3. Single, Clear Call-to-Action</h3>
-                <p>One CTA per page. Not &ldquo;Book a call&rdquo; and &ldquo;Download PDF&rdquo; and &ldquo;Sign up&rdquo; all competing for attention. Pick the action that moves prospects closest to becoming customers.</p>
+                <h2>Day 9 to 10: Harden and hand off</h2>
+                <p>Meta tags, canonicals, sitemap, redirects if needed, broken-link pass, content freeze. We also write a tiny &ldquo;do not break this&rdquo; note for whoever edits copy next week.</p>
+                <p>Launch day should feel slightly boring. Boring is a compliment in production.</p>
 
-                <h3>4. Speed That Doesn&rsquo;t Kill Conversions</h3>
-                <p>Every second of load time costs you conversions. Google found that 53% of mobile users abandon sites that take longer than 3 seconds to load.</p>
-                <p>Speed is also about perceived speed. Optimize images, lazy load below-the-fold content, and prioritize critical CSS.</p>
+                <h2>What we deliberately do not do in 10 days</h2>
+                <p>Custom illustration packs. Pixel-perfect recreations of every competitor. Auth flows with twelve edge cases no user will hit until Q4. Those can wait. Trust and speed cannot.</p>
 
-                <h3>5. Mobile-First Design That Actually Works</h3>
-                <p>Most landing pages are &ldquo;mobile-responsive&rdquo; but not &ldquo;mobile-optimized.&rdquo; On mobile, your CTA should be thumb-friendly, text should be scannable, and forms should be minimal.</p>
-                <p>Test on actual devices, not just browser dev tools.</p>
-
-                <h2>What We Do Differently</h2>
-                <p>When I build landing pages for funded startups and Web3 teams, I start with conversion goals, not design mockups. Every element is tested against one question: &ldquo;Does this help the visitor take the next step?&rdquo;</p>
-
-                <h2>Ready to Fix Your Landing Page?</h2>
-                <p>If your ads are working but your landing page isn&rsquo;t converting, let&rsquo;s talk.</p>
+                <h2>Want this energy on your launch?</h2>
+                <p>I ship conversion-focused frontends for startups, Web3 teams, and founders who need momentum without looking temporary. If you have a deadline with a date on it, bring it to a call and we will see what fits the window.</p>
 
                 <div class="article-cta">
                     <button class="btn btn-primary calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">

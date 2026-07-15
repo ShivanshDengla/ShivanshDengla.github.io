@@ -11,8 +11,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Web Development Blog | Landing Page Tips, Website Optimization USA</title>
-    <meta name="description" content="Expert web development tips for US businesses. Learn landing page optimization, website speed, conversion strategies, and how to improve your website's performance.">
+    <title>Blog | Shivansh Dengla</title>
+    <meta name="description" content="Notes on Next.js, Core Web Vitals, GEO, conversion, and shipping frontends for startups and founders.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
     <meta name="robots" content="index, follow">
@@ -21,149 +21,142 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></noscript>
-
-    <link rel="stylesheet" href="css/artistic.css">
-
+    <link rel="stylesheet" href="css/portfolio.css">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></noscript>
 </head>
 <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <canvas id="aurora-canvas" aria-hidden="true"></canvas>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-halo" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <nav class="site-nav">
-        <a class="nav-brand" href="index.html">SHIVANSH<span class="brand-dot">.</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="index.html#craft">Craft</a></li>
-            <li><a href="blog.html" class="is-active">Blog</a></li>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-brand" href="index.html">Shivansh Dengla</a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-sm calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
+                    <span class="btn-label">Let&rsquo;s Talk</span>
+                    <span class="btn-label btn-label-hover" aria-hidden="true">Let&rsquo;s Talk</span>
+                </button>
+                <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+        <ul class="mobile-menu-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li><button class="nav-cta calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min">Book a Call</button></li>
         </ul>
     </nav>
 
     <main>
-        <header class="page-hero">
-            <div class="hero-orb orb-1" aria-hidden="true"></div>
-            <div class="hero-orb orb-2" aria-hidden="true"></div>
-            <div class="section-inner">
-                <p class="section-tag reveal">Insights</p>
-                <h1 class="section-heading reveal" style="--d:0.08s">Frontend notes for <span class="accent">founders</span> who ship</h1>
-                <p class="section-lede reveal" style="--d:0.16s">Conversion, performance, and Web3&mdash;practical writing for funded startups, SaaS teams, and builders who care about outcomes.</p>
+        <section class="section blog-index">
+            <div class="blog-index-head">
+                <p class="section-kicker"><span class="text-underline">Writing</span></p>
+                <h1 class="projects-heading">Blog<span class="projects-dot">.</span></h1>
+                <p class="section-desc">Short notes on conversion, performance, Next.js, AI UI, and shipping with taste.</p>
             </div>
-        </header>
 
-        <section class="section" id="blog">
-            <div class="section-inner">
-                <div class="blog-grid">
-                    <article class="blog-card reveal-scale">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-calendar"></i> Jan 2025 &middot; Conversion</p>
-                            <h3>Why Most Landing Pages Don&rsquo;t Convert (And How We Fix It)</h3>
-                            <p>Most landing pages fail because they focus on design over conversion. Learn the 5 critical elements that separate high-converting landing pages from pretty websites that don&rsquo;t make money.</p>
-                            <a href="blog-landing-pages-dont-convert.html" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+            <div class="blog-list">
+                <a class="blog-row" href="blog-ai-frontend-taste.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">AI</span>
+                    </div>
+                    <h2>AI Can Scaffold Your UI Overnight</h2>
+                    <p>Vibe coding is fast. Buyers can still smell generic. How to use AI tools without shipping a beige SaaS clone.</p>
+                </a>
 
-                    <article class="blog-card reveal-scale" style="--d:0.08s">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-calendar"></i> Jan 2025 &middot; Performance</p>
-                            <h3>Speed Optimization That Actually Impacts Revenue</h3>
-                            <p>Every second of load time costs you conversions. Here&rsquo;s how we improved a SaaS landing page&rsquo;s conversion rate by 27% through speed optimization alone.</p>
-                            <a href="blog-speed-optimization.html" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                <a class="blog-row" href="blog-core-web-vitals.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">Performance</span>
+                    </div>
+                    <h2>Core Web Vitals That Actually Convert</h2>
+                    <p>LCP, INP, and CLS as human questions, not lab trophies. What to fix first on a landing page that spends ad money.</p>
+                </a>
 
-                    <article class="blog-card reveal-scale" style="--d:0.16s">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                            <i class="fab fa-ethereum"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-calendar"></i> Jan 2025 &middot; Web3</p>
-                            <h3>Web3 Frontend Integration: Best Practices for Crypto Dashboards</h3>
-                            <p>Building crypto dashboards and DeFi interfaces requires more than just connecting to wallets. Learn the critical UX patterns for Web3 frontends.</p>
-                            <a href="blog-web3-frontend.html" class="blog-read">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                <a class="blog-row" href="blog-nextjs-saas-landing-pages.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">Next.js</span>
+                    </div>
+                    <h2>Next.js Landing Pages That Rank</h2>
+                    <p>App Router, Server Components, and conversion structure so Google gets HTML and buyers get a clear ask.</p>
+                </a>
 
-                    <article class="blog-card is-soon reveal-scale">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-clock"></i> Coming Soon &middot; Pricing</p>
-                            <h3>What $500 vs $5,000 Websites Actually Differ In</h3>
-                            <p>It&rsquo;s not about code quality&mdash;it&rsquo;s about outcomes. High-paying clients buy solutions to business problems, not just websites.</p>
-                            <span class="blog-read">Coming Soon</span>
-                        </div>
-                    </article>
+                <a class="blog-row" href="blog-geo-ai-overviews.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">SEO</span>
+                    </div>
+                    <h2>GEO for Humans and AI Overviews</h2>
+                    <p>Answer-first pages that cite well in generative search without sounding like a textbook was held hostage.</p>
+                </a>
 
-                    <article class="blog-card is-soon reveal-scale" style="--d:0.08s">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-clock"></i> Coming Soon &middot; Development</p>
-                            <h3>How We Shipped a Production-Ready Frontend in 10 Days</h3>
-                            <p>Case study: How we built a complete SaaS frontend for a funded startup in 10 days without cutting corners.</p>
-                            <span class="blog-read">Coming Soon</span>
-                        </div>
-                    </article>
+                <a class="blog-row" href="blog-website-pricing.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">Pricing</span>
+                    </div>
+                    <h2>What $500 vs $5,000 Websites Differ In</h2>
+                    <p>It is not about code polish alone. High paying clients buy outcomes, clarity, and pages that earn traffic.</p>
+                </a>
 
-                    <article class="blog-card is-soon reveal-scale" style="--d:0.16s">
-                        <div class="blog-card-thumb" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="blog-card-body">
-                            <p class="blog-meta"><i class="far fa-clock"></i> Coming Soon &middot; SaaS</p>
-                            <h3>SaaS Frontend Architecture: Building for Scale</h3>
-                            <p>Funded startups need frontends that scale. Learn the architecture patterns that separate production-ready SaaS frontends from MVPs that break.</p>
-                            <span class="blog-read">Coming Soon</span>
-                        </div>
-                    </article>
-                </div>
+                <a class="blog-row" href="blog-shipped-frontend-10-days.html">
+                    <div class="blog-row-meta">
+                        <span>Jul 2026</span>
+                        <span class="blog-row-tag">Process</span>
+                    </div>
+                    <h2>How We Shipped a Production Frontend in 10 Days</h2>
+                    <p>A tight sprint on scoping, the conversion spine, performance gates, and what to cut before launch.</p>
+                </a>
 
-                <p class="blog-footer-note reveal">More articles coming soon. Want to discuss a specific topic? <a href="index.html#contact">Get in touch</a> or <button class="calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min" style="background:none;border:none;padding:0;color:var(--magenta);font:inherit;font-weight:600;cursor:pointer;border-bottom:1px solid rgba(255,46,196,0.4)">book a call</button>.</p>
-            </div>
-        </section>
+                <a class="blog-row" href="blog-landing-pages-dont-convert.html">
+                    <div class="blog-row-meta">
+                        <span>Jan 2025</span>
+                        <span class="blog-row-tag">Conversion</span>
+                    </div>
+                    <h2>Why Most Landing Pages Don&rsquo;t Convert</h2>
+                    <p>Most pages fail because they prioritize aesthetics over the decision moment. Five elements that actually move the needle.</p>
+                </a>
 
-        <section class="section mega-cta">
-            <div class="section-inner">
-                <h2 class="giant reveal">Ready to <span class="stroke">boost</span><br>your conversions?</h2>
-                <p class="reveal" style="--d:0.12s">Book a call. Let&rsquo;s discuss how we can improve your conversion rates and build a frontend that converts.</p>
-                <div class="reveal" style="--d:0.22s">
-                    <button class="btn-aurora calendly-btn" data-calendly-url="https://calendly.com/shivanshdengla/30min"><i class="fas fa-calendar-alt"></i> Book a Call</button>
-                </div>
+                <a class="blog-row" href="blog-speed-optimization.html">
+                    <div class="blog-row-meta">
+                        <span>Jan 2025</span>
+                        <span class="blog-row-tag">Performance</span>
+                    </div>
+                    <h2>Speed Optimization That Impacts Revenue</h2>
+                    <p>Load time is a conversion feature. How speed work on a SaaS landing page lifted results without redesigning the whole product.</p>
+                </a>
+
+                <a class="blog-row" href="blog-web3-frontend.html">
+                    <div class="blog-row-meta">
+                        <span>Jan 2025</span>
+                        <span class="blog-row-tag">Web3</span>
+                    </div>
+                    <h2>Web3 Frontend Integration Patterns</h2>
+                    <p>Wallet flows, loading states, and dashboard UX that keep crypto products feeling as clear as any Web2 app.</p>
+                </a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <span class="foot-brand">SHIVANSH<span style="color:var(--magenta)">.</span></span>
-        <span class="foot-copy">&copy; 2026 All Rights Reserved by <a href="https://www.shivanshdengla.com" style="color:var(--ink-dim)">Shivansh Dengla</a></span>
-        <nav class="foot-social" aria-label="Social links">
-            <a href="https://github.com/ShivanshDengla" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/DenglaShivansh" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/shivanshdengla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/shivansh-dengla-a5baa9179/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://mail.google.com/mail/?view=cm&to=shivanshdengla@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="far fa-envelope"></i></a>
-        </nav>
+        <span>&copy; 2026 Shivansh Dengla</span>
+        <a href="index.html">Home</a>
     </footer>
 
-    <script defer src="js/artistic.js"></script>
+    <script defer src="js/portfolio.js"></script>
     <script>
         function loadCalendly() {
             if (!window.Calendly) {
@@ -173,7 +166,6 @@
                 document.head.appendChild(script);
             }
         }
-
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.calendly-btn').forEach(function(button) {
                 button.addEventListener('click', function(e) {
@@ -184,8 +176,8 @@
                         if (window.Calendly) {
                             Calendly.initPopupWidget({
                                 url: url,
-                                text: 'Book a Call',
-                                color: '#ff2ec4',
+                                text: "Let's Talk",
+                                color: '#0d7377',
                                 textColor: '#ffffff',
                                 branding: true
                             });

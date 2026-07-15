@@ -6,7 +6,7 @@
 
     <url>
         <loc>https://www.shivanshdengla.com/</loc>
-        <lastmod>2026-04-01</lastmod>
+        <lastmod>2026-07-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -27,9 +27,51 @@
 
     <url>
         <loc>https://www.shivanshdengla.com/blog</loc>
-        <lastmod>2026-04-01</lastmod>
+        <lastmod>2026-07-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-ai-frontend-taste</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-core-web-vitals</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-nextjs-saas-landing-pages</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-geo-ai-overviews</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-website-pricing</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.shivanshdengla.com/blog-shipped-frontend-10-days</loc>
+        <lastmod>2026-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
     <url>

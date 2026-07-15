@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Why Most Landing Pages Don't Convert | Shivansh Dengla</title>
-    <meta name="description" content="Most landing pages fail because they focus on design over conversion. Learn the 5 critical elements that separate high-converting pages from pretty sites that don't convert.">
+    <title>Next.js SaaS Landing Pages That Rank and Convert | Shivansh Dengla</title>
+    <meta name="description" content="How to build Next.js App Router landing pages with SSG, metadata, Core Web Vitals, and conversion structure that Google and buyers both understand.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Shivansh Dengla">
-    <link rel="canonical" href="https://www.shivanshdengla.com/blog-landing-pages-dont-convert">
+    <meta name="keywords" content="Next.js landing page, App Router SEO, React Server Components, SaaS frontend, programmatic SEO">
+    <link rel="canonical" href="https://www.shivanshdengla.com/blog-nextjs-saas-landing-pages">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,42 +52,44 @@
             <a class="blog-back" href="blog.html">&larr; Back to Blog</a>
             <header class="blog-post-header">
                 <div class="blog-post-meta">
-                    <span>January 2025</span>
-                    <span class="blog-row-tag">Conversion</span>
+                    <span>July 2026</span>
+                    <span class="blog-row-tag">Next.js</span>
                 </div>
-                <h1>Why Most Landing Pages Don&rsquo;t Convert (And How We Fix It)</h1>
+                <h1>Next.js Landing Pages That Rank (Without Shipping a Blob of Client JS)</h1>
             </header>
 
             <div class="article-body">
-                <p>You&rsquo;re running ads. You&rsquo;re getting traffic. But your landing page isn&rsquo;t converting. Sound familiar?</p>
-                <p>After building frontends for funded startups and Web3 teams, I&rsquo;ve seen the same mistakes over and over. Most landing pages fail because they prioritize design aesthetics over conversion psychology.</p>
+                <p>There is a special genre of SaaS homepage where the first thing the browser downloads is enough JavaScript to run a small municipality. Then, eventually, a headline appears and says &ldquo;Simple.&rdquo;</p>
+                <p><strong>Next.js</strong> is excellent for marketing and product marketing pages when you use it like a grown-up: server-first HTML, light interactivity, and metadata that means something.</p>
 
-                <h2>The 5 Critical Elements That Separate High-Converting Landing Pages</h2>
+                <h2>App Router defaults that help SEO</h2>
+                <p>In the App Router, think in layers:</p>
+                <ul>
+                    <li><strong>Server Components</strong> for the narrative shell: headline, proof, pricing, FAQ copy Google can actually read.</li>
+                    <li><strong>Client Components</strong> only where hands need to move: pricing toggles, calendars, demos, wallet connect.</li>
+                    <li><strong>Static generation</strong> for stable pages. Marketing content rarely needs to reinvent itself on every request.</li>
+                </ul>
+                <p>If your homepage is a SPA cosplaying as a brochure, crawlers get HTML soufflé: impressive collapse, empty fork.</p>
 
-                <h3>1. Clear Value Proposition Above the Fold</h3>
-                <p>Your visitor should understand what you do and why they should care within 3 seconds. Not &ldquo;We&rsquo;re a cutting-edge SaaS platform.&rdquo; Instead: &ldquo;Turn more visitors into customers with a conversion-focused frontend.&rdquo;</p>
-                <p>Action: Write your headline as if you&rsquo;re explaining to a friend what problem you solve, not what you built.</p>
+                <h2>Metadata is not a forgotten favicon chore</h2>
+                <p>Use the Metadata API per route. Unique titles, honest descriptions, canonicals, Open Graph images that do not look like a screenshot of panic. For comparison or city pages under programmatic SEO, generate titles from real data, not &ldquo;Best {thing} near you!!!&rdquo;</p>
 
-                <h3>2. Social Proof That Builds Trust</h3>
-                <p>Testimonials are good. Specific results are better. Instead of &ldquo;Great developer!&rdquo; use &ldquo;Increased our conversion rate in 10 days.&rdquo;</p>
-                <p>For funded startups and Web3 teams, showing you&rsquo;ve worked with similar companies matters. Display logos or names of clients in your space.</p>
+                <h2>Programmatic SEO without thin-page regret</h2>
+                <p>Generating a thousand pages is easy. Generating a thousand pages worth indexing is the craft. Each page needs a unique answer, unique numbers, or unique judgment. Templates plus empty adjectives are doorway pages with better fonts.</p>
+                <p>My rule on client builds: if deleting the page would not remove any real information from the internet, do not ship it.</p>
 
-                <h3>3. Single, Clear Call-to-Action</h3>
-                <p>One CTA per page. Not &ldquo;Book a call&rdquo; and &ldquo;Download PDF&rdquo; and &ldquo;Sign up&rdquo; all competing for attention. Pick the action that moves prospects closest to becoming customers.</p>
+                <h2>Conversion structure still wins the sale</h2>
+                <p>SEO traffic arriving at a vague hero is just expensive lurkers. Pair Next.js performance with conversion hygiene:</p>
+                <ol>
+                    <li>One primary CTA above the fold</li>
+                    <li>Proof that matches the buyer&rsquo;s fear</li>
+                    <li>FAQ that answers objections in plain language</li>
+                    <li>Speed that does not apologize mid-click</li>
+                </ol>
 
-                <h3>4. Speed That Doesn&rsquo;t Kill Conversions</h3>
-                <p>Every second of load time costs you conversions. Google found that 53% of mobile users abandon sites that take longer than 3 seconds to load.</p>
-                <p>Speed is also about perceived speed. Optimize images, lazy load below-the-fold content, and prioritize critical CSS.</p>
-
-                <h3>5. Mobile-First Design That Actually Works</h3>
-                <p>Most landing pages are &ldquo;mobile-responsive&rdquo; but not &ldquo;mobile-optimized.&rdquo; On mobile, your CTA should be thumb-friendly, text should be scannable, and forms should be minimal.</p>
-                <p>Test on actual devices, not just browser dev tools.</p>
-
-                <h2>What We Do Differently</h2>
-                <p>When I build landing pages for funded startups and Web3 teams, I start with conversion goals, not design mockups. Every element is tested against one question: &ldquo;Does this help the visitor take the next step?&rdquo;</p>
-
-                <h2>Ready to Fix Your Landing Page?</h2>
-                <p>If your ads are working but your landing page isn&rsquo;t converting, let&rsquo;s talk.</p>
+                <h2>Where I come in</h2>
+                <p>I build frontend products and marketing UIs for startups that need the page to both rank and close. Next.js is a tool. Taste and conversion sense are the differentiator.</p>
+                <p>If your current site is a client-heavy maze with SEO hopes taped on top, we can simplify it without making it boring.</p>
 
                 <div class="article-cta">
                     <button class="btn btn-primary calendly-btn" type="button" data-calendly-url="https://calendly.com/shivanshdengla/30min">
