@@ -960,6 +960,12 @@ body.menu-open .site-header {
   display: block;
 }
 
+.project-stack-media img[src*="blc.png"] {
+  object-fit: contain;
+  object-position: center;
+  background: #12081f;
+}
+
 .project-stack-label {
   position: absolute;
   left: 0.9rem;
