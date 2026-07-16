@@ -1,9 +1,23 @@
 import { defineConfig } from 'vite';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { readdirSync, statSync, copyFileSync, existsSync } from 'node:fs';
+import { readdirSync, statSync, copyFileSync, existsSync, mkdirSync } from 'node:fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function copyDir(src, dest) {
+  if (!existsSync(src)) return;
+  mkdirSync(dest, { recursive: true });
+  for (const entry of readdirSync(src, { withFileTypes: true })) {
+    const srcPath = resolve(src, entry.name);
+    const destPath = resolve(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      copyFileSync(srcPath, destPath);
+    }
+  }
+}
 
 // Get all HTML files for multi-page support
 function getHtmlFiles(dir = '.', fileList = []) {
@@ -37,6 +51,8 @@ function copyRootStaticToDist() {
           copyFileSync(src, dest);
         }
       }
+      // Plain scripts referenced without type="module" are not emitted by Vite
+      copyDir(resolve(__dirname, 'js'), resolve(outDir, 'js'));
     },
   };
 }
