@@ -179,6 +179,47 @@
       return (header ? header.offsetHeight : 68) + 28;
     }
 
+    function parseLinks(card) {
+      return (card.getAttribute("data-links") || "")
+        .split("||")
+        .filter(Boolean)
+        .map(function (pair) {
+          var parts = pair.split("::");
+          if (parts.length < 2) return null;
+          return { label: parts[0], href: parts.slice(1).join("::") };
+        })
+        .filter(Boolean);
+    }
+
+    function appendLinks(container, links) {
+      links.forEach(function (link) {
+        var a = document.createElement("a");
+        a.textContent = link.label;
+        a.href = link.href;
+        a.target = "_blank";
+        a.rel = "noopener";
+        container.appendChild(a);
+      });
+    }
+
+    function buildHoverOverlays() {
+      cards.forEach(function (card) {
+        var media = card.querySelector(".project-stack-media");
+        if (!media || media.querySelector(".project-stack-overlay")) return;
+
+        var links = parseLinks(card);
+        if (!links.length) return;
+
+        var overlay = document.createElement("div");
+        overlay.className = "project-stack-overlay";
+        var inner = document.createElement("div");
+        inner.className = "project-stack-overlay-links";
+        appendLinks(inner, links);
+        overlay.appendChild(inner);
+        media.appendChild(overlay);
+      });
+    }
+
     function applyCard(card) {
       if (!card || !desktopQuery.matches) return;
       var title = card.getAttribute("data-title") || "";
@@ -203,19 +244,7 @@
           });
 
         linksEl.innerHTML = "";
-        (card.getAttribute("data-links") || "")
-          .split("||")
-          .filter(Boolean)
-          .forEach(function (pair) {
-            var parts = pair.split("::");
-            if (parts.length < 2) return;
-            var a = document.createElement("a");
-            a.textContent = parts[0];
-            a.href = parts.slice(1).join("::");
-            a.target = "_blank";
-            a.rel = "noopener";
-            linksEl.appendChild(a);
-          });
+        appendLinks(linksEl, parseLinks(card));
 
         panel.classList.remove("is-updating");
       }, reduceMotion ? 0 : 140);
@@ -223,6 +252,21 @@
       cards.forEach(function (c) {
         c.classList.toggle("is-active", c === card);
       });
+    }
+
+    function getActiveCard() {
+      var offset = stickyOffset();
+      var scrollAnchor = window.scrollY + offset + 4;
+      var active = cards[0];
+
+      for (var i = 0; i < cards.length; i++) {
+        var cardTop = cards[i].getBoundingClientRect().top + window.scrollY;
+        if (scrollAnchor >= cardTop) {
+          active = cards[i];
+        }
+      }
+
+      return active;
     }
 
     function update() {
@@ -235,12 +279,6 @@
       }
 
       var offset = stickyOffset();
-      var active = cards[0];
-
-      cards.forEach(function (card) {
-        var top = card.getBoundingClientRect().top;
-        if (top <= offset + 12) active = card;
-      });
 
       cards.forEach(function (card, i) {
         var covered = false;
@@ -256,7 +294,7 @@
         card.classList.toggle("is-recessed", covered);
       });
 
-      applyCard(active);
+      applyCard(getActiveCard());
     }
 
     function onScroll() {
@@ -265,6 +303,14 @@
         requestAnimationFrame(update);
       }
     }
+
+    buildHoverOverlays();
+
+    cards.forEach(function (card) {
+      card.addEventListener("mouseenter", function () {
+        if (desktopQuery.matches) applyCard(card);
+      });
+    });
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
